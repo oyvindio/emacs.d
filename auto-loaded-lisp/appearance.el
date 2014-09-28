@@ -1,3 +1,6 @@
+(require 'color-theme)
+(require 'color-theme-sanityinc-solarized)
+
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
     (setenv "PATH" path-from-shell)
