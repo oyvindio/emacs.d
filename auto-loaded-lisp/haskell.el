@@ -1,3 +1,5 @@
+(require 'flycheck)
+
 (add-to-list 'auto-mode-alist '("*.hs" . haskell-mode))
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 
@@ -45,19 +47,19 @@
       (list)
     (gather-errors (split-string hlint-output "\n"))))
 
-(flycheck-declare-checker haskell-ghc-checker
-  "A simple syntax checker using ghc"
-  :command '("ghc" "-Wall" "-fno-warn-name-shadowing" source-inplace)
-  :error-parser 'parse-ghc-output
-  :modes 'haskell-mode
-  :next-checkers '(haskell-hlint-checker))
+;; (flycheck-declare-checker haskell-ghc-checker
+;;   "A simple syntax checker using ghc"
+;;   :command '("ghc" "-Wall" "-fno-warn-name-shadowing" source-inplace)
+;;   :error-parser 'parse-ghc-output
+;;   :modes 'haskell-mode
+;;   :next-checkers '(haskell-hlint-checker))
 
-(flycheck-declare-checker haskell-hlint-checker
-  "A simple syntax checker using hlint"
-  :command '("hlint" source-inplace)
-  :error-parser 'parse-hlint-output
-  :modes 'haskell-mode)
+;; (flycheck-declare-checker haskell-hlint-checker
+;;   "A simple syntax checker using hlint"
+;;   :command '("hlint" source-inplace)
+;;   :error-parser 'parse-hlint-output
+;;   :modes 'haskell-mode)
 
-(add-to-list 'flycheck-checkers 'haskell-hlint-checker)
+;; (add-to-list 'flycheck-checkers 'haskell-hlint-checker)
 
 (provide 'haskell)
