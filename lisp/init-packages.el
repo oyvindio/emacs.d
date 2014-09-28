@@ -23,6 +23,7 @@
                                'flx-ido
                                'projectile
                                'pytest
+                               'scala-mode
                                ))
 
 
