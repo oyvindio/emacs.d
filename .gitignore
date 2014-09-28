@@ -3,3 +3,4 @@ backups/**
 places
 elpa/**
 *.elc
+local.el

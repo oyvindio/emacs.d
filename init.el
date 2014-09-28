@@ -15,3 +15,6 @@
 (mapc 'load (directory-files (dot-emacs-relative "auto-loaded-lisp")
                              t "^[^#].*el$"))
 
+(if (file-exists-p (dot-emacs-relative "local.el"))
+  (load (dot-emacs-relative "local.el")))
+
