@@ -15,6 +15,3 @@
 (mapc 'load (directory-files (dot-emacs-relative "auto-loaded-lisp")
                              t "^[^#].*el$"))
 
-
-(require 'defuns)
-(require 'bindings)
