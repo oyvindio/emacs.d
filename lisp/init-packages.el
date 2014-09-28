@@ -19,6 +19,8 @@
                                'expand-region
                                'multiple-cursors
                                'nose
+                               'flx-ido
+                               'projectile
                                ))
 
 
@@ -51,25 +53,8 @@ just have to assume it's online."
       (message "Installing %s" (symbol-name package))
       (package-install package))))
 
-;; (when (is-online)
-;;   (unless package-archive-contents (package-refresh-contents)
-;;           (install-default-packages)))
-
-
-
-(defun prelude-packages-installed-p ()
-  (loop for p in default-packages
-        when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
-
-(unless (prelude-packages-installed-p)
-  ;; check for new packages (package versions)
-  (message "%s" "Emacs Prelude is now refreshing its package database...")
-  (package-refresh-contents)
-  (message "%s" " done.")
-  ;; install the missing packages
-  (dolist (p default-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
+(when (is-online)
+  (unless package-archive-contents (package-refresh-contents)
+          (install-default-packages)))
 
 (provide 'init-packages)
