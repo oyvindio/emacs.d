@@ -41,4 +41,8 @@
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-subword-mode)
 
+(defun run-coding-hook ()
+  (run-hooks 'coding-hook))
+
+
 (provide 'coding)

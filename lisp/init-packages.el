@@ -8,6 +8,7 @@
                                'find-file-in-project
                                'magit
                                'js2-mode
+			       'js2-refactor
                                'yasnippet-bundle
                                'full-ack
                                'paredit
@@ -21,6 +22,7 @@
                                'nose
                                'flx-ido
                                'projectile
+                               'pytest
                                ))
 
 
