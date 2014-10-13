@@ -25,6 +25,7 @@
                                'pytest
                                'scala-mode
                                'fill-column-indicator
+                               'exec-path-from-shell
                                ))
 
 

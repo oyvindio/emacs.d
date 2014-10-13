@@ -1,16 +1,10 @@
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
 
-(defun set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
-    (setenv "PATH" path-from-shell)
-    (setq exec-path (split-string path-from-shell path-separator))))
-
 (when window-system
   (load "color-theme-sanityinc-solarized")
   (set-face-attribute 'default nil :font "Source Code Pro 12")
   (color-theme-sanityinc-solarized-light)
-  (set-exec-path-from-shell-PATH)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
