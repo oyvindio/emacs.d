@@ -4,3 +4,4 @@ places
 elpa/**
 *.elc
 local.el
+/projectile-bookmarks.eld
