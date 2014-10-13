@@ -22,6 +22,7 @@
 (global-set-key (kbd "C-x C-m") 'ido-execute-extended-command)
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
+(global-set-key (kbd "C-x C-M-f") 'projectile-find-file)
 
 ;; free up M-c for other key bindings; capitalize-word isn't THAT
 ;; important
