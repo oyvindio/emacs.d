@@ -10,9 +10,8 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-
-(setq fill-column 118
-      visible-bell t
+(setq-default fill-column 118)
+(setq  visible-bell t
       fringe-mode (cons 4 0)
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
