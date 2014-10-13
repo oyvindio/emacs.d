@@ -24,6 +24,7 @@
                                'projectile
                                'pytest
                                'scala-mode
+                               'fill-column-indicator
                                ))
 
 

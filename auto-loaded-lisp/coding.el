@@ -31,6 +31,10 @@
             (subword-mode 1)
             (c-subword-mode 1)))
 
+(require 'fill-column-indicator)
+(defun turn-on-fci-mode ()
+  (fci-mode 1))
+
 (defvar coding-hook nil
   "Hook that gets run on activation of any programming mode.")
 
@@ -40,6 +44,7 @@
 (add-hook 'coding-hook 'turn-on-save-place-mode)
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-subword-mode)
+(add-hook 'coding-hook 'turn-on-fci-mode)
 
 (defun run-coding-hook ()
   (run-hooks 'coding-hook))
