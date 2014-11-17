@@ -1,14 +1,8 @@
 (eval-after-load 'ruby-mode
   '(progn
-     ;; work around possible elpa bug
-     (ignore-errors (require 'ruby-compilation))
-     (setq ruby-use-encoding-map nil)
-     (add-hook 'ruby-mode-hook 'inf-ruby-keys)
-
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
      (define-key ruby-mode-map (kbd "C-c #") 'comment-region)
-     (autoload 'rvm "rvm" "RVM integration for emacs." t)
      (auto-fill-mode 0)))
 
 (global-set-key (kbd "C-h r") 'ri)
@@ -58,5 +52,9 @@ exec-to-string command, but it works and seems fast"
      (ad-activate 'ruby-do-run-w/compilation)))
 
 (add-hook 'ruby-mode-hook 'run-coding-hook)
+
+(if (file-exists-p "/usr/local/bin/rbenv")
+  (setq rbenv-executable "/usr/local/bin/rbenv"))
+
 
 (provide 'ruby)
