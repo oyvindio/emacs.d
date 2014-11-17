@@ -37,4 +37,7 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
+(when (file-exists-p "/usr/local/bin/emacsclient")
+  (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
+
 (provide 'starter-kit-magit)
