@@ -86,7 +86,10 @@
   ;; cmd as meta
   (when (equal system-type 'darwin)
     (setq ns-command-modifier 'meta)
-    (setq ns-option-modifier 'super)))
+    (setq ns-option-modifier 'super))
+
+  ;; Stop showing me the print dialog when i use this hotkey, it's never what i want
+  (global-unset-key (kbd "s-p")))
 
 (global-set-key  [C-tab] 'other-window)
 (add-hook 'org-mode-hook
