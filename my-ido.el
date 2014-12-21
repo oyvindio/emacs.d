@@ -136,6 +136,10 @@ Symbols matching the text at point are put first in the completion list."
       ido-use-filename-at-point 'guess
       ido-max-prospects 10)
 
+;; Ignore .DS_Store files with ido mode
+(when (eq system-name 'darwin)
+  (add-to-list 'ido-ignore-files "\\.DS_Store"))
+
 (ido-mode t)
 
 (provide 'my-ido)
