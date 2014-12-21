@@ -1,7 +1,10 @@
 (define-key read-expression-map (kbd "TAB") 'lisp-complete-symbol)
 (define-key lisp-mode-shared-map (kbd "C-c l") "lambda")
 (define-key lisp-mode-shared-map (kbd "RET") 'reindent-then-newline-and-indent)
-(define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
+(define-key lisp-mode-shared-map (kbd "M-/") 'lisp-complete-symbol)
+(define-key lisp-mode-shared-map (kbd "C-\\") 'comment-dwim)
+(define-key lisp-mode-shared-map (kbd "M-\\") 'comment-or-uncomment-region-or-line)
+(define-key lisp-mode-shared-map (kbd "C-\\") 'comment-or-uncomment-region-or-line)
 (define-key lisp-mode-shared-map (kbd "C-c v") 'eval-buffer)
 
 (defface esk-paren-face
