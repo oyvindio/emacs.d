@@ -1,11 +1,8 @@
 (global-set-key (kbd "C-h a") 'apropos)
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
-(global-set-key (kbd "C-x C-i") 'ido-imenu)
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -17,12 +14,8 @@
 (global-set-key (kbd "C-x d") 'duplicate-line)
 (global-set-key (kbd "C-c C-g") 'gist-buffer-confirm)
 (global-set-key (kbd "C-x a a") 'ack)
-(global-set-key (kbd "M-i") 'ido-goto-symbol)
-(global-set-key (kbd "M-x") 'ido-execute-extended-command)
-(global-set-key (kbd "C-x C-m") 'ido-execute-extended-command)
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
-(global-set-key (kbd "C-x C-i") 'ido-imenu)
-(global-set-key (kbd "C-x C-M-f") 'projectile-find-file)
+
 
 ;; free up M-c for other key bindings; capitalize-word isn't THAT
 ;; important
@@ -100,8 +93,8 @@
             ; to get right...
             (define-key org-mode-map (kbd "C-c t") 'org-todo)))
 
-(eval-after-load 'browse-kill-ring
-  (global-set-key (kbd "M-c b") 'browse-kill-ring))
+;; (eval-after-load 'browse-kill-ring
+  ;; (global-set-key (kbd "M-c b") 'browse-kill-ring))
 
 (global-set-key (kbd "C-x C-c")
                 '(lambda ()

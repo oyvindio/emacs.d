@@ -12,6 +12,8 @@
 (require 'remove-gui)
 (require 'init-packages)
 
+(require 'my-helm)
+
 (setq custom-file (dot-emacs-relative "custom.el"))
 
 ;; load all elisp

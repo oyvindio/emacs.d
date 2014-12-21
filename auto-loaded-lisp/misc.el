@@ -1,6 +1,3 @@
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
@@ -42,14 +39,6 @@
 (recentf-mode 1)
 (show-paren-mode 1)
 (setq-default indent-tabs-mode nil)
-
-(when (> emacs-major-version 21)
-  (ido-mode t)
-  (setq ido-enable-prefix nil
-        ido-enable-flex-matching t
-        ido-create-new-buffer 'always
-        ido-use-filename-at-point 'guess
-        ido-max-prospects 10))
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'text-mode-hook 'column-number-mode)
