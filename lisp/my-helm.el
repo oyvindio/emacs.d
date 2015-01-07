@@ -24,7 +24,10 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "M-c b") 'helm-show-kill-ring)
+(global-set-key (kbd "M-g f")  'helm-git-grep)
+(global-set-key (kbd "M-g M-f")  'helm-git-grep)
+(global-set-key (kbd "M-g k") 'helm-show-kill-ring)
+(global-set-key (kbd "M-g i") 'helm-imenu)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-x C-M-f") 'helm-projectile-find-file)
@@ -32,6 +35,7 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
 
 
 (when (executable-find "curl")
