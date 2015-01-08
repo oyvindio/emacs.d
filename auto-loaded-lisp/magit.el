@@ -33,11 +33,12 @@
 (eval-after-load 'magit
   '(progn
      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
-     (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
+     (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+     (setq magit-backup-mode nil)))
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (when (file-exists-p "/usr/local/bin/emacsclient")
   (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
 
-(provide 'starter-kit-magit)
+(provide 'magit)
