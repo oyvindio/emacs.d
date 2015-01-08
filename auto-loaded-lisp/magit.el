@@ -37,6 +37,8 @@
      (setq magit-backup-mode nil)))
 
 (global-set-key (kbd "C-x g") 'magit-status)
+(define-key magit-mode-map [C-tab] 'other-window)
+(define-key magit-mode-map (kbd "C-c t") 'magit-section-toggle)
 
 (when (file-exists-p "/usr/local/bin/emacsclient")
   (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
