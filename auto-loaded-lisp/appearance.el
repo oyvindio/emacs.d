@@ -3,7 +3,7 @@
 
 (when window-system
   (load "color-theme-sanityinc-solarized")
-  (set-face-attribute 'default nil :font "Source Code Pro 12")
+  (set-face-attribute 'default nil :font "Source Code Pro 14")
   (color-theme-sanityinc-solarized-light)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
