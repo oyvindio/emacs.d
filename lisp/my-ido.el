@@ -122,6 +122,12 @@ Symbols matching the text at point are put first in the completion list."
 
 (define-key ibuffer-mode-map (kbd "C-x C-f") 'ibuffer-ido-find-file)
 
+(defun sudo-edit (&optional arg)
+  (interactive "p")
+  (if (or arg (not buffer-file-name))
+      (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
 (global-set-key (kbd "M-i") 'ido-goto-symbol)
