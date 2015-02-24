@@ -4,9 +4,6 @@
 (add-hook 'js2-mode-hook 'run-coding-hook)
 (setq js2-basic-offset 2)
 
-;; json in js2-mode hack
-(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
-
 (defadvice js2-reparse (before json)
 	(setq js2-buffer-file-name buffer-file-name))
 (ad-activate 'js2-reparse)
