@@ -3,7 +3,7 @@
 (add-hook 'js2-mode-hook 'moz-minor-mode)
 (add-hook 'js2-mode-hook 'run-coding-hook)
 (setq js2-basic-offset 2)
-
+(setq js-indent-level 2)
 (defadvice js2-reparse (before json)
 	(setq js2-buffer-file-name buffer-file-name))
 (ad-activate 'js2-reparse)
@@ -26,5 +26,5 @@
 (require 'js2-refactor)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
-(provide 'js)
+(provide 'my-js)
 ;;; starter-kit-js.el ends here
