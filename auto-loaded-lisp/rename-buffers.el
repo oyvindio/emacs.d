@@ -2,7 +2,8 @@
       '(("pom.xml" . "pom")
 	("setup.py" . "setup")
 	("Makefile" . "make")
-	("__init__.py" . "pkg")))
+	("__init__.py" . "pkg")
+        ("bower.json" . "bower")))
 
 (defun detect-and-rename-file-buffers ()
   (mapcar (lambda (acons)
