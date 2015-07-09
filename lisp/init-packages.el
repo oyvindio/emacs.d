@@ -23,12 +23,13 @@
                                'flx-ido
                                'projectile
                                'pytest
-                               'scala-mode
+                               'scala-mode2
                                'fill-column-indicator
                                'exec-path-from-shell
                                'rbenv
                                'puppet-mode
                                'dockerfile-mode
+                               'ensime
                                ))
 
 
