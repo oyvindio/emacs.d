@@ -1,4 +1,8 @@
-;; Activate column-number-mode in git commit msg
+;; (add-to-list 'load-path "~/Projects/git-modes")
+;; (add-to-list 'load-path "~/Projects/magit")
+;; (eval-after-load 'info
+;;   '(progn (info-initialize)
+;;           (add-to-list 'Info-directory-list  "~/Projects/magit")))
 (require 'magit)
 
 (add-hook 'magit-log-edit-mode-hook 'local-column-number-mode)
@@ -41,6 +45,8 @@
 (define-key magit-mode-map (kbd "C-c t") 'magit-section-toggle)
 
 (when (file-exists-p "/usr/local/bin/emacsclient")
-  (setq magit-emacsclient-executable "/usr/local/bin/emacsclient"))
+  '(progn
+     (setq magit-emacsclient-executable "/usr/local/bin/emacsclient")
+     (setq with-editor-emacsclient-executable "/usr/local/bin/emacsclient")))
 
-(provide 'magit)
+(provide 'my-magit)
