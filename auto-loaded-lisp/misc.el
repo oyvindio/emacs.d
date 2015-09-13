@@ -32,7 +32,8 @@
       save-place-file (dot-emacs-relative "places")
       backup-directory-alist `(("." . ,(dot-emacs-relative "backups")))
       indicate-empty-lines t
-      imenu-auto-rescan t)
+      imenu-auto-rescan t
+      smart-mark-mode t)
 
 (auto-compression-mode t)
 (global-font-lock-mode t)

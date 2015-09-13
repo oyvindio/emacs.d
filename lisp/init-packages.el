@@ -30,6 +30,7 @@
                                'puppet-mode
                                'dockerfile-mode
                                'ensime
+                               'smart-mark
                                'mmm-mode
                                ))
 
