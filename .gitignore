@@ -9,3 +9,6 @@ local.el
 /games/
 /tramp
 /url/
+bookmarks
+var
+.mc-lists.el
