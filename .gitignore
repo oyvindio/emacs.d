@@ -10,3 +10,6 @@ local.el
 /tramp
 /url/
 recentf
+bookmarks
+var
+.mc-lists.el

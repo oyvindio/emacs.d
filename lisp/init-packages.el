@@ -25,7 +25,6 @@
                                'pytest
                                'scala-mode2
                                'fill-column-indicator
-                               'exec-path-from-shell
                                'rbenv
                                'puppet-mode
                                'dockerfile-mode
@@ -35,6 +34,8 @@
                                'helm-projectile
                                'helm-git-grep
                                'unfill
+                               'smart-mark
+                               'mmm-mode
                                ))
 
 
