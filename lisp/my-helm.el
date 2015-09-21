@@ -37,7 +37,6 @@
 (global-set-key (kbd "M-g i") 'helm-imenu)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
-(global-set-key (kbd "C-x C-M-f") 'helm-projectile-find-file)
 (global-set-key (kbd "C-x f") 'helm-recentf)
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
@@ -67,6 +66,10 @@
 
 
 (helm-mode 1)
-(helm-projectile-on)
+(if (boundp 'helm-projectile-on)
+    (progn
+      (helm-projectile-on)
+      (global-set-key (kbd "C-x C-M-f") 'helm-projectile-find-file))
+  (display-warning :warning "helm-projectile-on not bound, could not enable helm-projectile"))
 
 (provide 'my-helm)
