@@ -112,4 +112,8 @@
                               (name 16 -1)
                               " " filename)))
 
+(setq mouse-wheel-scroll-amount '(1
+                                  ((shift) . 5)
+                                  ((control))))
+
 (provide 'misc)
