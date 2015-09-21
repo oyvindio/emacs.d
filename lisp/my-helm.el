@@ -66,7 +66,7 @@
 
 
 (helm-mode 1)
-(if (boundp 'helm-projectile-on)
+(if (functionp 'helm-projectile-on)
     (progn
       (helm-projectile-on)
       (global-set-key (kbd "C-x C-M-f") 'helm-projectile-find-file))
