@@ -30,6 +30,11 @@
                                'puppet-mode
                                'dockerfile-mode
                                'ensime
+                               'json-mode
+                               'helm
+                               'helm-projectile
+                               'helm-git-grep
+                               'unfill
                                ))
 
 
