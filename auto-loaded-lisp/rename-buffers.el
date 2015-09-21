@@ -3,6 +3,7 @@
 	("setup.py" . "setup")
 	("Makefile" . "make")
 	("__init__.py" . "pkg")
+        ("finnbuild.json" . "finnbuild")
         ("bower.json" . "bower")))
 
 (defun detect-and-rename-file-buffers ()
