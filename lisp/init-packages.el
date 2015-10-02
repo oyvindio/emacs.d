@@ -36,6 +36,7 @@
                                'unfill
                                'smart-mark
                                'mmm-mode
+                               'terraform-mode
                                ))
 
 
