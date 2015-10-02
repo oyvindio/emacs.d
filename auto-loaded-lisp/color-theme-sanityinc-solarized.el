@@ -283,6 +283,13 @@
          (ack-match ((t (:foreground ,strong :background nil :inverse-video t))))
          (ack-file ((t (:foreground ,magenta :background nil))))
          (ack-line ((t (:foreground ,faintest :background nil))))
+
+         ;; helm
+         (helm-ff-file ((t (:inherit default))))
+         (helm-ff-executable ((t (:foreground ,red))))
+         (helm-ff-directory ((t (:foreground ,blue :background nil))))
+         (helm-ff-symlink ((t (:foreground ,magenta))))
+         (helm-ff-invalid-symlink ((t (:background ,red))))
          )))))
 
 ;;;###autoload
