@@ -285,6 +285,15 @@ by using nxml's indentation rules."
   "Render ANSI color escape codes in color"
   (interactive)
   (save-excursion
-      (ansi-color-apply-on-region (point-min) (point-max))))
+    (ansi-color-apply-on-region (point-min) (point-max))))
+
+(defun copy-buffer-file-name ()
+  (interactive)
+  (let ((file-name (buffer-file-name)))
+    (if file-name
+        (progn
+          (kill-new file-name)
+          (message "Saved buffer-file-name to kill-ring"))
+      (message "Buffer %s does not have an associated file." (buffer-name)))))
 
 (provide 'defuns)
