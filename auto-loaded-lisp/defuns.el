@@ -281,4 +281,10 @@ by using nxml's indentation rules."
     (let ((text (delete-and-extract-region start end)))
       (insert (funcall func text)))))
 
+(defun ansi-colorize-buffer ()
+  "Render ANSI color escape codes in color"
+  (interactive)
+  (save-excursion
+      (ansi-color-apply-on-region (point-min) (point-max))))
+
 (provide 'defuns)
