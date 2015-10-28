@@ -1,3 +1,5 @@
+(require 'helm-flx)
+(helm-flx-mode +1)
 (require 'helm)
 (require 'helm-config)
 (require 'ibuffer)

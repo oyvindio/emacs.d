@@ -37,6 +37,7 @@
                                'smart-mark
                                'mmm-mode
                                'terraform-mode
+                               'helm-flx
                                ))
 
 
