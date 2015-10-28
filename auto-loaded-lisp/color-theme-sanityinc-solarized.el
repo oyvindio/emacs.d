@@ -290,6 +290,7 @@
          (helm-ff-directory ((t (:foreground ,blue :background nil))))
          (helm-ff-symlink ((t (:foreground ,magenta))))
          (helm-ff-invalid-symlink ((t (:background ,red))))
+         (mmm-default-submode-face ((t (:background ,alt-background))))
          )))))
 
 ;;;###autoload
