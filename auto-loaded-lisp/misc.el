@@ -117,4 +117,7 @@
                                   ((shift) . 5)
                                   ((control))))
 
+(setq ring-bell-function '(lambda () ; workaround for badly broken visual bell in OSX 10.11
+                               (invert-face 'mode-line)
+                               (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 (provide 'misc)
