@@ -28,7 +28,6 @@
                                'rbenv
                                'puppet-mode
                                'dockerfile-mode
-                               'ensime
                                'json-mode
                                'helm
                                'helm-projectile
