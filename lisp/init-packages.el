@@ -8,7 +8,7 @@
                                'find-file-in-project
                                'magit
                                'js2-mode
-			       'js2-refactor
+                               'js2-refactor
                                'yasnippet-bundle
                                'full-ack
                                'paredit
@@ -37,6 +37,7 @@
                                'mmm-mode
                                'terraform-mode
                                'helm-flx
+                               'python-mode
                                ))
 
 

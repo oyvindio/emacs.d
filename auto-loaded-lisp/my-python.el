@@ -10,9 +10,11 @@
                                      (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
 
 (require 'pytest)
+(require 'pyenv-mode)
 (eval-after-load 'python-mode
   '(progn
-     (define-key py-mode-map (kbd "M-?") 'hippie-expand)
-     (define-key py-mode-map (kbd "C-c t") 'pytest-all)))
+     (define-key python-mode-map (kbd "M-?") 'hippie-expand)
+     (define-key python-mode-map (kbd "C-c t") 'pytest-all)))
 
-(provide 'python)
+
+(provide 'my-python)
