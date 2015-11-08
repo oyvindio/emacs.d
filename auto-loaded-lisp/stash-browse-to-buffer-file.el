@@ -9,7 +9,7 @@ file is in a git repository, and that the git repository has a remote that is a 
          (line-number (line-number-at-pos)))
     (if relative-file-name
         (let ((default-dir git-dir))
-          (shell-command (format "%s browse browse -l %d %s" stash-executable line-number relative-file-name)))
+          (call-process stash-executable nil 0 nil "browse" "browse" "-l" (number-to-string line-number) relative-file-name))
       (message "Buffer %s does not have an associated file." (buffer-name)))))
 
 (provide 'stash-browwse-to-buffer-file)
