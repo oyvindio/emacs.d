@@ -11,9 +11,11 @@
   (blink-cursor-mode -1)
   (server-start)
   
-  ;; Don't pop up new frames when opening files via drag n drop or
-  ;; open with in OS X
+
   (when (eq system-type 'darwin)
+    ;; Don't fullscreen emacs into its own space
+    (setq ns-use-native-fullscreen nil)
+    ;; Don't pop up new frames when opening files via drag n drop
     (setq ns-pop-up-frames nil)))
 
 (provide 'appearance)
