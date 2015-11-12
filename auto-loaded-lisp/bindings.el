@@ -57,7 +57,7 @@
 
 
 (when (eq system-type 'darwin)
-  (global-set-key (kbd "<f11>") 'ns-toggle-fullscreen)
+  (global-set-key (kbd "<f9>") 'toggle-frame-fullscreen)
 
   ;; I'm using US keyboard layout on a Norwegian keyboard, with s-';[
   ;; mapped to the Norwegian letters æøå, and needed to get this to
