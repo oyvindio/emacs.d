@@ -38,6 +38,7 @@
                                'terraform-mode
                                'helm-flx
                                'python-mode
+                               'restclient-mode
                                ))
 
 
