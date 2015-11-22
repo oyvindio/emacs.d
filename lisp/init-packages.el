@@ -39,6 +39,7 @@
                                'helm-flx
                                'python-mode
                                'restclient-mode
+                               'lua-mode
                                ))
 
 
