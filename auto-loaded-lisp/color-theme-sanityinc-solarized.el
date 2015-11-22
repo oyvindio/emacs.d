@@ -168,8 +168,8 @@
          (header-line ((t (:background nil :foreground ,strong :inherit nil))))
 
          ;; Parenthesis matching
-         (show-paren-match ((t (:background nil :foreground nil :inverse-video t))))
-         (show-paren-mismatch ((t (:background ,magenta :foreground ,background))))
+         (show-paren-match ((t (:background nil :foreground ,green :inverse-video t))))
+         (show-paren-mismatch ((t (:background ,red :foreground ,background))))
 
          (slime-highlight-edits-face ((t (:foreground ,strong))))
 
