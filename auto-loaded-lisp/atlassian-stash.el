@@ -80,4 +80,4 @@ Atlassian Stash. Assumes that the file is in a git repo where the
          (line-number (line-number-at-pos)))
     (kill-new (stash/create-stash-file-url git-dir relative-file-name git-branch line-number))))
 
-(provide 'stash-browse-to-buffer-file)
+(provide 'atlassian-stash)
