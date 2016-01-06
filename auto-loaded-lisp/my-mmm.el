@@ -14,6 +14,11 @@
 (add-to-list 'auto-mode-alist '("\\.sh\\.erb$" . shell-script-mode))
 (mmm-add-mode-ext-class 'shell-script-mode "\\.sh\\.erb\\'" 'erb)
 
+(add-to-list 'auto-mode-alist '("\\.jinja2\\'" . html-mode))
+(mmm-add-mode-ext-class 'html-mode "\\.jinja2\\'" 'jinja2)
+(add-to-list 'auto-mode-alist '("\\.j2\\'" . html-mode))
+(mmm-add-mode-ext-class 'html-mode "\\.j2\\'" 'jinja2)
+
 (defun add-mmm-parse-buffer-on-save-hook ()
   (add-hook 'after-save-hook 'mmm-parse-buffer nil t))
 

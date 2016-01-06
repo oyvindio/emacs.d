@@ -44,6 +44,7 @@
                                'go-mode
                                'go-playground
                                'go-eldoc
+                               'mmm-jinja2
                                ))
 
 
