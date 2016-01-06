@@ -40,6 +40,10 @@
                                'python-mode
                                'restclient-mode
                                'lua-mode
+                               'github-browse-file
+                               'go-mode
+                               'go-playground
+                               'go-eldoc
                                ))
 
 
