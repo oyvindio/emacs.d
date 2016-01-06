@@ -45,6 +45,7 @@
                                'go-playground
                                'go-eldoc
                                'mmm-jinja2
+                               'editorconfig
                                ))
 
 

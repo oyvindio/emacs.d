@@ -123,4 +123,7 @@
 
 (setq github-browse-file-show-line-at-point t)
 
+(require 'editorconfig)
+(editorconfig-mode 1)
+
 (provide 'misc)
