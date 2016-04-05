@@ -46,6 +46,8 @@
                                'go-eldoc
                                'mmm-jinja2
                                'editorconfig
+                               'flycheck
+                               'helm-flycheck
                                ))
 
 

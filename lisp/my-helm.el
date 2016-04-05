@@ -3,6 +3,7 @@
 (require 'helm)
 (require 'helm-config)
 (require 'ibuffer)
+(require 'helm-flycheck)
 
 (defun ibuffer-helm-find-file (file &optional wildcards)
   "Like `find-file', but default to the directory of the buffer at point."
@@ -37,6 +38,7 @@
 (global-set-key (kbd "M-g M-f")  'helm-git-grep)
 (global-set-key (kbd "M-g k") 'helm-show-kill-ring)
 (global-set-key (kbd "M-g i") 'helm-imenu)
+(global-set-key (kbd "M-g e") 'helm-flycheck)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-x f") 'helm-recentf)
