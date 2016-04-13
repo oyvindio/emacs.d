@@ -5,6 +5,8 @@
 ; go get github.com/nsf/gocode
 (require 'go-eldoc)
 
+; go get golang.org/x/tools/cmd/goimports
+(setq gofmt-command "goimports")
 (defun enable-gofmt-on-save ()
   (add-hook 'before-save-hook 'gofmt-before-save))
 
