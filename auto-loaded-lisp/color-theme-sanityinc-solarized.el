@@ -92,8 +92,8 @@
          (underline ((t (:underline t))))
          (italic ((t (:italic t))))
          (font-lock-builtin-face ((t (:foreground ,green))))
-         (font-lock-comment-delimiter-face ((t (:foreground ,faintest :slant italic))))
-         (font-lock-comment-face ((t (:foreground ,faint :slant italic))))
+         (font-lock-comment-delimiter-face ((t (:foreground ,faintest))))
+         (font-lock-comment-face ((t (:foreground ,faint))))
          (font-lock-constant-face ((t (:foreground ,violet))))
          (font-lock-doc-face ((t (:foreground ,magenta))))
          (font-lock-doc-string-face ((t (:foreground ,yellow))))
@@ -112,11 +112,11 @@
          ;; Python-specific overrides
          ;; (py-builtins-face ((t (:foreground ,violet))))
          (py-builtins-face ((t (:foreground ,magenta :weight normal))))
-         
+
          ;; Flymake
          (flymake-warnline ((t (:underline ,orange))))
          (flymake-errline ((t (:underline ,red))))
-         
+
          ;; Flyspell
          ;; (flyspell-incorrect-face ((t (:underline ,red :background ,background))))
          ;; (flyspell-duplicate-face ((t (:underline ,orange
@@ -135,7 +135,7 @@
          (isearch ((t (:foreground ,magenta :background nil :inverse-video t))))
          (isearch-lazy-highlight-face ((t (:foreground ,strong :inverse-video t))))
          (isearch-fail ((t (:background nil :inherit font-lock-warning-face :inverse-video t)))) ; if something is weird with search, this might be it
-         
+
          ;; IDO
          (ido-subdir ((t (:foreground ,magenta))))
          (ido-first-match ((t (:foreground ,yellow))))
@@ -158,7 +158,7 @@
                                            :foreground ,faintest
                                            :background ,alt-background :weight normal
                                            :box (:line-width 1 :color ,normal)))))
-         
+
          (mode-line-emphasis ((t (:foreground ,strong))))
          (mode-line-highlight ((t (:foreground ,magenta :box nil :weight bold))))
          (minibuffer-prompt ((t (:foreground ,blue))))
