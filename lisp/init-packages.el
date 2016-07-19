@@ -1,59 +1,58 @@
 (require 'package)
 (package-initialize)
 
-(defvar default-packages (list 'ruby-mode
-                               'inf-ruby
-                               'css-mode
-                               'yaml-mode
-                               'find-file-in-project
-                               'magit
-                               'js2-mode
-                               'js2-refactor
-                               'yasnippet-bundle
-                               'full-ack
-                               'paredit
-                               'color-theme
-                               'markdown-mode
-                               'haskell-mode
-                               'ghc
-                               'ghci-completion
-                               'expand-region
-                               'multiple-cursors
-                               'nose
-                               'flx-ido
-                               'projectile
-                               'pytest
-                               'scala-mode2
-                               'fill-column-indicator
-                               'rbenv
-                               'puppet-mode
-                               'dockerfile-mode
-                               'json-mode
-                               'helm
-                               'helm-projectile
-                               'helm-git-grep
-                               'unfill
-                               'smart-mark
-                               'mmm-mode
-                               'terraform-mode
-                               'helm-flx
-                               'python-mode
-                               'restclient-mode
-                               'lua-mode
-                               'github-browse-file
-                               'go-mode
-                               'go-playground
-                               'go-eldoc
-                               'mmm-jinja2
-                               'editorconfig
-                               'flycheck
-                               'helm-flycheck
-                               ))
+(setq default-packages (list 'ruby-mode
+                             'inf-ruby
+                             'css-mode
+                             'yaml-mode
+                             'find-file-in-project
+                             'magit
+                             'js2-mode
+                             'js2-refactor
+                             'full-ack
+                             'paredit
+                             'color-theme
+                             'markdown-mode
+                             'haskell-mode
+                             'ghc
+                             'ghci-completion
+                             'expand-region
+                             'multiple-cursors
+                             'nose
+                             'flx-ido
+                             'projectile
+                             'pytest
+                             'scala-mode
+                             'fill-column-indicator
+                             'rbenv
+                             'puppet-mode
+                             'dockerfile-mode
+                             'json-mode
+                             'helm
+                             'helm-projectile
+                             'helm-git-grep
+                             'unfill
+                             'smart-mark
+                             'mmm-mode
+                             'terraform-mode
+                             'helm-flx
+                             'python-mode
+                             'restclient
+                             'lua-mode
+                             'github-browse-file
+                             'go-mode
+                             'go-playground
+                             'go-eldoc
+                             'mmm-jinja2
+                             'editorconfig
+                             'flycheck
+                             'helm-flycheck
+                             'pyenv-mode
+                             ))
 
-
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 
 (setq package-user-dir (dot-emacs-relative "elpa"))
 
@@ -81,7 +80,8 @@ just have to assume it's online."
       (package-install package))))
 
 (when (is-online)
-  (unless package-archive-contents (package-refresh-contents)
-          (install-default-packages)))
+  (unless package-archive-contents
+    (package-refresh-contents)
+    (install-default-packages)))
 
 (provide 'init-packages)
