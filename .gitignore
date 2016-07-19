@@ -13,3 +13,5 @@ recentf
 bookmarks
 var
 .mc-lists.el
+/custom.el
+/network-security.data
