@@ -18,3 +18,10 @@
 (add-hook 'go-mode-hook 'enable-godef-jump)
 (add-hook 'go-mode-hook 'enable-gofmt-on-save)
 (add-hook 'go-mode-hook 'run-coding-hook)
+
+(let ((gopath (getenv "GOPATH"))
+      (gopath-fallback "~/src/go")
+      (relative-playground-basedir "playground"))
+  (if (null gopath)
+      (setq go-playground-basedir (concat gopath-fallback "/" relative-playground-basedir)))
+  (setq go-playground-basedir (concat gopath "/" relative-playground-basedir)))
