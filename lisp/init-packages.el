@@ -48,6 +48,7 @@
                              'flycheck
                              'helm-flycheck
                              'pyenv-mode
+                             'magithub
                              ))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
