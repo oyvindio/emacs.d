@@ -48,7 +48,7 @@
                              'flycheck
                              'helm-flycheck
                              'pyenv-mode
-                             'magithub
+                             'markdown-mode
                              'toggle-quotes
                              ))
 

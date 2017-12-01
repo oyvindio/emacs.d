@@ -4,7 +4,6 @@
 ;;   '(progn (info-initialize)
 ;;           (add-to-list 'Info-directory-list  "~/Projects/magit")))
 (require 'magit)
-(require 'magithub)
 
 (add-hook 'magit-log-edit-mode-hook 'local-column-number-mode)
 
