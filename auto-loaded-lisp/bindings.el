@@ -50,6 +50,7 @@
 
 (global-set-key (kbd "s-b") 'browse-url)
 
+(require 'toggle-quotes)
 (global-set-key (kbd "M-s-q") 'toggle-quotes)
 
 (setq yas/trigger-key "M-g e")

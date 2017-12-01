@@ -123,7 +123,7 @@ by using nxml's indentation rules."
   (save-excursion
       (nxml-mode)
       (goto-char begin)
-      (while (search-forward-regexp "\>[ \\t]*\<" nil t) 
+      (while (search-forward-regexp "\>[ \\t]*\<" nil t)
         (backward-char) (insert "\n"))
       (indent-region begin end))
   (message "Ah, much better!"))
@@ -172,54 +172,6 @@ by using nxml's indentation rules."
             (setq beg (region-beginning) end (region-end))
             (setq beg (line-beginning-position) end (line-end-position)))
         (comment-or-uncomment-region beg end))))
-
-;; source: http://stackoverflow.com/a/11654136/37208
-(defun center-rectangle (beg end)
-  (interactive "*r")
-  (kill-rectangle beg end)
-  (with-temp-buffer
-    (yank-rectangle)
-    (setq fill-column (current-column))
-    (center-region (point-min) (point-max))
-    (goto-char (point-max))
-    (move-to-column fill-column t)
-    (kill-rectangle (point-min) (point)))
-  (goto-char beg)
-  (yank-rectangle))
-
-(defun current-quotes-char ()
-  (nth 3 (syntax-ppss)))
-
-(defun move-point-forward-out-of-string ()
-  (while (point-is-in-string-p) (forward-char)))
-
-(defun move-point-backward-out-of-string ()
-  (while (point-is-in-string-p) (backward-char)))
-
-(defun alternate-quotes-char ()
-  (if (eq ?' (current-quotes-char)) ?\" ?'))
-
-(defalias 'point-is-in-string-p 'current-quotes-char)
-
-(defun toggle-quotes ()
-  (interactive)
-  (if (point-is-in-string-p)
-      (let ((old-quotes (char-to-string (current-quotes-char)))
-            (new-quotes (char-to-string (alternate-quotes-char)))
-            (start (make-marker))
-            (end (make-marker)))
-        (save-excursion
-          (move-point-forward-out-of-string)
-          (backward-delete-char 1)
-          (set-marker end (point))
-          (insert new-quotes)
-          (move-point-backward-out-of-string)
-          (delete-char 1)
-          (insert new-quotes)
-          (set-marker start (point))
-          (replace-string new-quotes (concat "\\" new-quotes) nil start end)
-          (replace-string (concat "\\" old-quotes) old-quotes nil start end)))
-    (error "Point isn't in a string")))
 
 ; source: http://stackoverflow.com/a/6541072
 (defun apply-function-to-region (start end func)

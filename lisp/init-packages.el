@@ -49,6 +49,7 @@
                              'helm-flycheck
                              'pyenv-mode
                              'magithub
+                             'toggle-quotes
                              ))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
