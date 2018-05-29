@@ -114,8 +114,13 @@
          (py-builtins-face ((t (:foreground ,magenta :weight normal))))
 
          ;; Flymake
-         (flymake-warnline ((t (:underline ,orange))))
-         (flymake-errline ((t (:underline ,red))))
+         (flymake-warnline ((t (:background ,orange))))
+         (flymake-errline ((t (:background ,red))))
+
+         ;; flycheck
+         (flycheck-error ((t (:underline (:style wave :color ,red)))))
+         (flycheck-warning ((t (:underline (:style wave :color ,orange)))))
+         (flycheck-info ((t (:underline (:style wave :color ,blue)))))
 
          ;; Flyspell
          ;; (flyspell-incorrect-face ((t (:underline ,red :background ,background))))
@@ -185,6 +190,10 @@
          (magit-diff-add ((t (:inherit diff-added :foreground nil))))
          (magit-diff-changed ((t (:inherit diff-changed :foreground nil))))
          (magit-diff-del ((t (:inherit diff-removed :foreground nil))))
+         (magit-signature-good ((t (:foreground ,green))))
+         (magit-signature-bad ((t (:foreground ,red))))
+         (magit-signature-untrusted ((t (:foreground ,cyan))))
+         (magit-signature-expired ((t (:foreground ,orange))))
 
          (link ((t (:foreground nil :underline t))))
          (widget-button ((t (:underline t))))
