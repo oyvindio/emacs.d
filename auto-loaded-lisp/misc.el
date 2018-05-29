@@ -126,4 +126,7 @@
 (require 'editorconfig)
 (editorconfig-mode 1)
 
+(require 'flycheck)
+(global-flycheck-mode)
+
 (provide 'misc)
