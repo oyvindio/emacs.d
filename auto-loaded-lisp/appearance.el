@@ -9,8 +9,8 @@
   (tooltip-mode -1)
   (mouse-wheel-mode t)
   (blink-cursor-mode -1)
+  (pixel-scroll-mode t)
   (server-start)
-  
 
   (when (eq system-type 'darwin)
     ;; Don't fullscreen emacs into its own space
