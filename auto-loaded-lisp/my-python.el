@@ -16,5 +16,6 @@
      (define-key python-mode-map (kbd "M-?") 'hippie-expand)
      (define-key python-mode-map (kbd "C-c t") 'pytest-all)))
 
+(require 'flycheck-prospector)
 
 (provide 'my-python)

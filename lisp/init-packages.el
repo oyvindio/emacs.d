@@ -50,6 +50,7 @@
                              'pyenv-mode
                              'markdown-mode
                              'toggle-quotes
+                             'flycheck-prospector
                              ))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
