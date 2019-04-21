@@ -15,3 +15,4 @@ var
 .mc-lists.el
 /custom.el
 /network-security.data
+.lsp-session*

@@ -18,4 +18,7 @@
 
 (require 'flycheck-prospector)
 
+(require 'lsp-mode)
+(add-hook 'python-mode-hook 'lsp)
+
 (provide 'my-python)

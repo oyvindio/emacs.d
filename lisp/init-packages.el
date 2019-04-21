@@ -51,6 +51,8 @@
                              'markdown-mode
                              'toggle-quotes
                              'flycheck-prospector
+                             'lsp
+                             'lsp-python
                              ))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
