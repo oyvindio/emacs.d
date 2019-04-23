@@ -51,7 +51,7 @@
                              'markdown-mode
                              'toggle-quotes
                              'flycheck-prospector
-                             'lsp
+                             'lsp-mode
                              'lsp-python
                              ))
 
