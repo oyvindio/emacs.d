@@ -33,7 +33,8 @@
       backup-directory-alist `(("." . ,(dot-emacs-relative "backups")))
       indicate-empty-lines t
       imenu-auto-rescan t
-      smart-mark-mode t)
+      smart-mark-mode t
+      recentf-max-saved-items 200)
 
 (auto-compression-mode t)
 (global-font-lock-mode t)
