@@ -39,7 +39,7 @@
                              'python-mode
                              'restclient
                              'lua-mode
-                             'github-browse-file
+                             'browse-at-remote
                              'go-mode
                              'go-playground
                              'go-eldoc
