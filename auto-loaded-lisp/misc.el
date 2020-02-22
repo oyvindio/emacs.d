@@ -14,7 +14,6 @@
       font-lock-maximum-decoration t
       inhibit-startup-message t
       transient-mark-mode t
-      color-theme-is-global t
       shift-select-mode nil
       mouse-yank-at-point t
       require-final-newline t

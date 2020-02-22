@@ -11,7 +11,6 @@
                              'js2-refactor
                              'full-ack
                              'paredit
-                             'color-theme
                              'markdown-mode
                              'haskell-mode
                              'ghc
@@ -53,6 +52,7 @@
                              'flycheck-prospector
                              'lsp-mode
                              'lsp-python
+                             'solarized-theme
                              ))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")

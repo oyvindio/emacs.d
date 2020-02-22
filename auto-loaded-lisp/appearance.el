@@ -1,10 +1,9 @@
-(require 'color-theme)
-(require 'color-theme-sanityinc-solarized)
+(setq solarized-high-contrast-mode-line t)
+(setq solarized-use-less-bold t)
+(load-theme 'solarized-light t)
 
 (when window-system
-  (load "color-theme-sanityinc-solarized")
   (set-face-attribute 'default nil :font "Source Code Pro 14")
-  (color-theme-sanityinc-solarized-light)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
