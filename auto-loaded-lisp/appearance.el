@@ -2,8 +2,19 @@
 (setq solarized-use-less-bold t)
 (load-theme 'solarized-light t)
 
+(defun set-font-size (size)
+  (set-face-attribute 'default nil :font (concat "Source Code Pro " size)))
+
+(defun laptop-screen-font-size ()
+  (interactive)
+  (set-font-size "17"))
+
+(defun 4k-screen-font-size ()
+  (interactive)
+  (set-font-size "21"))
+
 (when window-system
-  (set-face-attribute 'default nil :font "Source Code Pro 14")
+  (4k-screen-font-size)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
