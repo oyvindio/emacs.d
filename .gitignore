@@ -16,3 +16,4 @@ var
 /custom.el
 /network-security.data
 .lsp-session*
+transient/*
