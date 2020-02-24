@@ -39,7 +39,10 @@
      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
      (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
      (setq magit-backup-mode nil)
-     (setq magit-diff-refine-hunk 'all)))
+     (setq magit-diff-refine-hunk 'all)
+     (setq git-commit-summary-max-length 50)
+     (setq git-commit-fill-column 72)
+     ))
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (define-key magit-mode-map [C-tab] 'other-window)
