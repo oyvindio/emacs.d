@@ -36,7 +36,7 @@
   (fci-mode 1))
 
 (defun turn-on-delete-trailing-whitespace ()
-  (add-hook 'before-save-hook 'delete-trailing-whitespace))
+  (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))
 
 (require 'editorconfig)
 (defun turn-on-editorconfig-mode ()
