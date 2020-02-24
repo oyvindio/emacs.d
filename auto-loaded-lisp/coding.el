@@ -51,7 +51,6 @@
 (add-hook 'coding-hook 'turn-on-save-place-mode)
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-subword-mode)
-(add-hook 'coding-hook 'turn-on-fci-mode)
 (add-hook 'coding-hook 'turn-on-delete-trailing-whitespace)
 (add-hook 'coding-hook 'turn-on-editorconfig-mode)
 
