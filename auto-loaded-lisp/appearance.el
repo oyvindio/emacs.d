@@ -1,6 +1,10 @@
-(setq solarized-high-contrast-mode-line t)
-(setq solarized-use-less-bold t)
-(load-theme 'solarized-light t)
+(require 'color-theme)
+(require 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-light)
+
+;; (setq solarized-high-contrast-mode-line t)
+;; (setq solarized-use-less-bold t)
+;; (load-theme 'solarized-light t)
 
 (defun set-font-size (size)
   (set-face-attribute 'default nil :font (concat "Source Code Pro " size)))
