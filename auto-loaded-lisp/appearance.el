@@ -1,3 +1,4 @@
+(setq color-theme-obsolete nil)
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
 (color-theme-sanityinc-solarized-light)
