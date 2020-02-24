@@ -10,7 +10,7 @@
   (when (> (display-color-cells) 8) (hl-line-mode t)))
 
 (defun turn-on-save-place-mode ()
-  (setq save-place t))
+  (save-place-mode t))
 
 (defun turn-on-whitespace ()
   (whitespace-mode t))
