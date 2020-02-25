@@ -51,6 +51,7 @@
                              'toggle-quotes
                              'flycheck-prospector
                              'lsp-mode
+			     'lsp-ui
                              'lsp-python
                              'solarized-theme
                              ))
