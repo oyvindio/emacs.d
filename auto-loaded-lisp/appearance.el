@@ -1,11 +1,33 @@
 (setq color-theme-obsolete nil)
-(require 'color-theme)
-(require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-light)
+;; (require 'color-theme)
+;; (require 'color-theme-sanityinc-solarized)
+;; (color-theme-sanityinc-solarized-light)
+;; (color-theme-sanityinc-solarized-dark)
 
-;; (setq solarized-high-contrast-mode-line t)
-;; (setq solarized-use-less-bold t)
-;; (load-theme 'solarized-light t)
+(require 'solarized-theme)
+(require 'solarized-palettes)
+(let ((solarized-customizations `((custom-theme-set-faces
+                                   theme-name
+                                   ;; More visible cursor
+                                   `(cursor ((,class (:foreground ,base03 :background ,magenta :inverse-video t))))
+                                   ;; More colors when highlighting code
+                                   `(font-lock-builtin-face ((t (:foreground ,green))))
+                                   `(font-lock-constant-face ((t (:foreground ,violet))))
+                                   `(font-lock-variable-name-face ((t (:foreground ,yellow))))
+                                   ;; Same colors as Solarized iterm2 theme for common file types in helm-find-files
+                                   `(helm-ff-executable ((t (:foreground ,red))))
+                                   `(helm-ff-symlink ((t (:foreground ,magenta))))
+                                   `(helm-ff-invalid-symlink ((t (:background ,red))))
+                                   ))))
+  (solarized-create-theme-file 'light 'solarized-light-custom solarized-light-color-palette-alist
+                               solarized-customizations)
+  (solarized-create-theme-file 'dark 'solarized-dark-custom solarized-light-color-palette-alist
+                               solarized-customizations))
+
+(setq solarized-high-contrast-mode-line t)
+(load-theme 'solarized-light-custom t)
+;; (load-theme 'solarized-dark-custom t)
+
 
 (defun set-font-size (size)
   (set-face-attribute 'default nil :font (concat "Source Code Pro " size)))
