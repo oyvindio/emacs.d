@@ -18,6 +18,21 @@
                                    `(helm-ff-executable ((t (:foreground ,red))))
                                    `(helm-ff-symlink ((t (:foreground ,magenta))))
                                    `(helm-ff-invalid-symlink ((t (:background ,red))))
+
+                                   ;; Use default colors for diff
+                                   `(magit-diff-added ((t :background "#ddffdd" :foreground "#22aa22")))
+                                   `(magit-diff-added-highlight ((t :background "#cceecc" :foreground "#22aa22")))
+                                   `(diff-added ((t :background "#ddffdd" :foreground "#22aa22")))
+                                   `(diff-refine-added ((t :background "#bbffbb")))
+                                   `(diff-added-highlight ((t :background "#cceecc" :foreground "#22aa22")))
+
+                                   `(magit-diff-removed ((t :background "#ffdddd" :foreground "#aa2222")))
+                                   `(magit-diff-removed-highlight ((t :background "#eecccc" :foreground "#aa2222")))
+                                   `(diff-removed ((t :background "#ffdddd" :foreground "#aa2222")))
+                                   `(diff-refine-removed ((t :background "#ffcccc")))
+                                   `(diff-removed-highlight ((t :background "#eecccc" :foreground "#aa2222")))
+
+
                                    ))))
   (solarized-create-theme-file 'light 'solarized-light-custom solarized-light-color-palette-alist
                                solarized-customizations)
