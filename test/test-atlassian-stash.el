@@ -41,6 +41,12 @@
                                                             "quux/quez.el" nil 1337)))
     (should (equal actual expected))))
 
+(ert-deftest test-add-file-path-branch-and-line-number-should-add-file-path-and-line-number-start-and-end ()
+  (let ((expected "https://git.example.com/projects/foo/repos/bar/browse/quux/quez.el#42-1337")
+        (actual (stash/add-file-path-branch-and-line-number "https://git.example.com/projects/foo/repos/bar"
+                                                            "quux/quez.el" nil "42-1337")))
+    (should (equal actual expected))))
+
 (ert-deftest test-add-file-path-branch-and-line-number-should-add-file-path-and-git-branch ()
   (let ((expected "https://git.example.com/projects/foo/repos/bar/browse/quux/quez.el?at=refs/heads/development#1337")
         (actual (stash/add-file-path-branch-and-line-number "https://git.example.com/projects/foo/repos/bar"

@@ -45,18 +45,23 @@ to https. Pass t as `stash-uses-http' to override this behavior."
             (format "%s://%s/projects/%s/repos/%s" stash-url-schema host stash-project stash-repo))
         (error "Could not convert git remote url '%s' to a stash url" git-remote-url)))))
 
-(defun stash/add-file-path-branch-and-line-number (stash-repo-url git-relative-file-path &optional git-branch line-number)
+(defun stash/add-file-path-branch-and-line-number (stash-repo-url git-relative-file-path &optional git-branch line-number-part)
   (let ((git-branch-part (if git-branch (format "?at=%s" git-branch) ""))
-        (line-number-part (if line-number (format "#%s" line-number) "")))
-    (format "%s/browse/%s%s%s" stash-repo-url git-relative-file-path git-branch-part line-number-part)))
+        (line-number-fragment (if line-number-part (format "#%s" line-number-part) "")))
+    (format "%s/browse/%s%s%s" stash-repo-url git-relative-file-path git-branch-part line-number-fragment)))
 
-(defun stash/create-stash-file-url (git-dir relative-file-name git-branch line-number)
+(defun stash/create-stash-file-url (git-dir relative-file-name git-branch line-number-part)
   (if relative-file-name
-        (let* ((default-directory git-dir)
-              (git-remote-url (stash/git-remote-url git-dir)))
-          (stash/add-file-path-branch-and-line-number
-           (stash/base-url-from-remote git-remote-url) relative-file-name git-branch line-number))
+      (let* ((default-directory git-dir)
+             (git-remote-url (stash/git-remote-url git-dir)))
+        (stash/add-file-path-branch-and-line-number-part
+         (stash/base-url-from-remote git-remote-url) relative-file-name git-branch line-number-part))
     (error "Argument relative-file-name was nil")))
+
+(defun stash/line-number-part ()
+  (if (use-region-p)
+      (format "%s-%s" (line-number-at-pos (region-beginning)) (line-number-at-pos (region-end)))
+    (line-number-at-pos)))
 
 (defun stash/browse-to-buffer-file ()
   "Browse to the current buffers file in Atlassian Stash. Assumes
@@ -66,18 +71,18 @@ points to a Stash instance."
   (let* ((git-dir (file-truename (vc-root-dir)))
          (git-branch (stash/git-current-branch git-dir))
          (relative-file-name (file-relative-name (buffer-file-name) git-dir))
-         (line-number (line-number-at-pos)))
-    (browse-url (stash/create-stash-file-url git-dir relative-file-name git-branch line-number))))
+         (line-number-part (stash/line-number-part)))
+    (browse-url (stash/create-stash-file-url git-dir relative-file-name git-branch line-number-part))))
 
 (defun stash/buffer-file-url-to-clipboard ()
-    "Copy the url to browse to the current buffers file in
+  "Copy the url to browse to the current buffers file in
 Atlassian Stash. Assumes that the file is in a git repo where the
 `origin' git remote points to a Stash instance."
   (interactive)
   (let* ((git-dir (file-truename (vc-root-dir)))
          (git-branch (stash/git-current-branch git-dir))
          (relative-file-name (file-relative-name (buffer-file-name) git-dir))
-         (line-number (line-number-at-pos)))
-    (kill-new (stash/create-stash-file-url git-dir relative-file-name git-branch line-number))))
+         (line-number-part (stash/line-number-part)))
+    (kill-new (stash/create-stash-file-url git-dir relative-file-name git-branch line-number-part))))
 
 (provide 'atlassian-stash)
