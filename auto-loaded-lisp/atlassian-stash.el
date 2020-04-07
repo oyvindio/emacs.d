@@ -54,7 +54,7 @@ to https. Pass t as `stash-uses-http' to override this behavior."
   (if relative-file-name
       (let* ((default-directory git-dir)
              (git-remote-url (stash/git-remote-url git-dir)))
-        (stash/add-file-path-branch-and-line-number-part
+        (stash/add-file-path-branch-and-line-number
          (stash/base-url-from-remote git-remote-url) relative-file-name git-branch line-number-part))
     (error "Argument relative-file-name was nil")))
 
