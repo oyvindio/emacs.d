@@ -1,9 +1,3 @@
-(setq color-theme-obsolete nil)
-;; (require 'color-theme)
-;; (require 'color-theme-sanityinc-solarized)
-;; (color-theme-sanityinc-solarized-light)
-;; (color-theme-sanityinc-solarized-dark)
-
 (require 'solarized-theme)
 (require 'solarized-palettes)
 (let ((solarized-customizations `((custom-theme-set-faces
