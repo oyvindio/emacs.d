@@ -41,7 +41,7 @@
 (show-paren-mode 1)
 (setq-default indent-tabs-mode nil)
 
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'text-mode-hook 'column-number-mode)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
