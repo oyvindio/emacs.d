@@ -97,6 +97,14 @@
      (list (line-beginning-position)
            (line-beginning-position 2)))))
 
+;; While searching with isearch, make kill-ring-save copy the current search match
+(defun isearch-kill-ring-save-match ()
+  "Copy current search match while searching with isearch."
+  (interactive)
+  (message "Copied match")
+  (kill-ring-save isearch-other-end (point)))
+(define-key isearch-mode-map (kbd "M-w") 'isearch-kill-ring-save-match)
+
 (when (eq system-type 'darwin)
   ;; Move to trash on delete
   (setq delete-by-moving-to-trash t)
