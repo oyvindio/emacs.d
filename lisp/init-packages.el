@@ -1,5 +1,4 @@
 (require 'package)
-(package-initialize)
 
 (setq default-packages (list 'ruby-mode
                              'inf-ruby
