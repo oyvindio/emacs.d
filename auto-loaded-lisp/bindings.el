@@ -31,8 +31,8 @@
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
-(global-set-key (kbd "C-M-s") 'isearch-current-symbol)
-(global-set-key (kbd "C-M-r") 'isearch-backward-current-symbol)
+(global-set-key (kbd "C-M-s") 'isearch-forward-symbol-at-point)
+(global-set-key (kbd "C-M-r") '(lambda () (interactive) isearch-forward-symbol-at-point -1))
 (global-set-key (kbd "C-c e") 'eval-and-replace)
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
 
