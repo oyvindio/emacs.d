@@ -17,3 +17,8 @@ var
 /network-security.data
 .lsp-session*
 transient/*
+workspace/*
+themes/*
+mspyls/*
+abbrev_defs
+.cache/*
