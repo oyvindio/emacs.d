@@ -29,6 +29,8 @@
 
 ;; C-w should do backward-kill-word, like in the shell
 (global-set-key (kbd "C-w") 'backward-kill-word)
+;; in the minibuffer too
+(define-key minibuffer-local-map (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
 (global-set-key (kbd "C-M-s") 'isearch-forward-symbol-at-point)
