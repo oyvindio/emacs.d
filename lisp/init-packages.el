@@ -10,7 +10,6 @@
                         'flx-ido
                         'flycheck
                         'flycheck-prospector
-                        'full-ack
                         'ghc
                         'ghci-completion
                         'go-eldoc
@@ -27,16 +26,14 @@
                         'js2-refactor
                         'json-mode
                         'lsp-mode
-                        'lsp-python
+                        'lsp-python-ms
                         'lsp-ui
                         'lua-mode
                         'magit
                         'markdown-mode
-                        'markdown-mode
                         'mmm-jinja2
                         'mmm-mode
                         'multiple-cursors
-                        'nose
                         'paredit
                         'projectile
                         'puppet-mode
