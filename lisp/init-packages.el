@@ -43,6 +43,8 @@
                         'rbenv
                         'restclient
                         'ruby-mode
+                        'rust-mode
+                        'rust-playground
                         'scala-mode
                         'smart-mark
                         'solarized-theme
