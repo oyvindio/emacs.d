@@ -13,6 +13,10 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 ;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
+(eval-after-load 'go-mode
+  '(define-key go-mode-map (kbd "<C-return>") 'go-run))
+
+
 (add-hook 'go-mode-hook 'enable-gofmt-on-save)
 (add-hook 'go-mode-hook 'run-coding-hook)
 (add-hook 'go-mode-hook 'lsp)
