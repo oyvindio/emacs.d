@@ -31,10 +31,6 @@
             (subword-mode 1)
             (c-subword-mode 1)))
 
-(require 'fill-column-indicator)
-(defun turn-on-fci-mode ()
-  (fci-mode 1))
-
 (defun turn-on-delete-trailing-whitespace ()
   (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))
 

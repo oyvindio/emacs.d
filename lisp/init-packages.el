@@ -6,7 +6,6 @@
                         'dockerfile-mode
                         'editorconfig
                         'expand-region
-                        'fill-column-indicator
                         'find-file-in-project
                         'flx-ido
                         'flycheck
