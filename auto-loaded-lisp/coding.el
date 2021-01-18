@@ -34,12 +34,15 @@
 (defun turn-on-delete-trailing-whitespace ()
   (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))
 
-(require 'editorconfig)
-(defun turn-on-editorconfig-mode ()
-  (editorconfig-mode 1))
 
 (defvar coding-hook nil
   "Hook that gets run on activation of any programming mode.")
+
+(use-package editorconfig
+  :ensure t
+  :commands editorconfig-mode
+  :init
+  (add-hook 'coding-hook #'editorconfig-mode))
 
 (add-hook 'coding-hook 'turn-on-column-number-mode)
 (add-hook 'coding-hook 'turn-on-comment-auto-fill)
@@ -48,7 +51,6 @@
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-subword-mode)
 (add-hook 'coding-hook 'turn-on-delete-trailing-whitespace)
-(add-hook 'coding-hook 'turn-on-editorconfig-mode)
 
 (defun run-coding-hook ()
   (run-hooks 'coding-hook))
