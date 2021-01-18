@@ -17,8 +17,9 @@
 (require 'cl)
 (require 'remove-gui)
 (require 'init-packages)
-
-(require 'my-helm)
+(require 'my-use-package)
+(require 'my-ivy)
+;; (require 'my-helm)
 
 (setq custom-file (dot-emacs-relative "custom.el"))
 
