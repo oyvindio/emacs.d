@@ -52,11 +52,9 @@
 
 (global-set-key (kbd "s-b") 'browse-url)
 
-(require 'toggle-quotes)
-(global-set-key (kbd "M-s-q") 'toggle-quotes)
-
-(setq yas/trigger-key "M-g e")
-
+(use-package toggle-quotes
+  :ensure t
+  :bind (("M-s-q" . toggle-quotes)))
 
 (when (eq system-type 'darwin)
   (global-set-key (kbd "<f9>") 'toggle-frame-fullscreen)
