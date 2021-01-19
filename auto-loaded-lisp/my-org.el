@@ -10,4 +10,12 @@
 
 (add-hook 'org-after-todo-statistics-hook 'my-org-autodone)
 
+(add-hook 'org-mode-hook
+          (lambda ()
+            ; don't hijack my keybinding, org-mode
+            (define-key org-mode-map [C-tab] 'other-window)
+            ; org-todo is bound to C-c C-t, which apparently is hard
+            ; to get right...
+            (define-key org-mode-map (kbd "C-c t") 'org-todo)))
+
 (provide 'my-org)

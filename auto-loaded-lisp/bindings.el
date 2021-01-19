@@ -87,16 +87,6 @@
   (global-unset-key (kbd "s-p")))
 
 (global-set-key  [C-tab] 'other-window)
-(add-hook 'org-mode-hook
-          (lambda ()
-            ; don't hijack my keybinding, org-mode
-            (define-key org-mode-map [C-tab] 'other-window)
-            ; org-todo is bound to C-c C-t, which apparently is hard
-            ; to get right...
-            (define-key org-mode-map (kbd "C-c t") 'org-todo)))
-
-;; (eval-after-load 'browse-kill-ring
-  ;; (global-set-key (kbd "M-c b") 'browse-kill-ring))
 
 (global-set-key (kbd "C-x C-c")
                 '(lambda ()
