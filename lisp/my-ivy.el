@@ -38,6 +38,7 @@
   (setq ivy-use-virtual-buffers t)
   (setq enable-recursive-minibuffers t)
   (setq ivy-wrap t)
-  (setq ivy-extra-directories nil))
+  (setq ivy-extra-directories nil)
+  (setq ivy-height 25))
 
 (provide 'my-ivy)
