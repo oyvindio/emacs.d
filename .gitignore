@@ -22,3 +22,4 @@ themes/*
 mspyls/*
 abbrev_defs
 .cache/*
+eln-cache/*
