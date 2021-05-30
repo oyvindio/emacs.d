@@ -1,6 +1,18 @@
 (use-package swiper
   :ensure t)
 
+(defun counsel-ibuffer-find-file (file &optional wildcards)
+  "Like `find-file', but default to the directory of the buffer at point."
+  (interactive
+   (let ((default-directory (let ((buf (ibuffer-current-buffer)))
+			      (if (buffer-live-p buf)
+				  (with-current-buffer buf
+				    default-directory)
+				default-directory))))
+     (list (read-file-name "Find file: " default-directory)
+	   t)))
+  (counsel-find-file file wildcards))
+
 (use-package counsel
   :ensure t
   :bind (("M-x" . counsel-M-x)
@@ -11,7 +23,9 @@
          ("M-g f" . counsel-git-grep)
          ("M-g M-f" . counsel-git-grep)
          ("M-g i" . counsel-imenu)
-         (:map counsel-find-file-map ("C-l" . counsel-up-directory))))
+         (:map counsel-find-file-map ("C-l" . counsel-up-directory))
+         (:map ibuffer-mode-map ("C-x C-f" . counsel-ibuffer-find-file))
+         ))
 
 (use-package counsel-projectile
   :ensure t
