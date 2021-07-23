@@ -4,14 +4,12 @@
 (defun counsel-ibuffer-find-file (file &optional wildcards)
   "Like `find-file', but default to the directory of the buffer at point."
   (interactive
-   (let ((default-directory (let ((buf (ibuffer-current-buffer)))
-			      (if (buffer-live-p buf)
-				  (with-current-buffer buf
-				    default-directory)
-				default-directory))))
-     (list (read-file-name "Find file: " default-directory)
-	   t)))
-  (counsel-find-file file wildcards))
+   (let ((initial-directory (let ((buf (ibuffer-current-buffer)))
+                              (if (buffer-live-p buf)
+                                  (with-current-buffer buf
+                                    default-directory)
+                                default-directory))))
+     (counsel-find-file nil initial-directory))))
 
 (use-package counsel
   :ensure t
