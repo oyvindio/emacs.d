@@ -11,7 +11,6 @@
 (global-set-key (kbd "C-x r s") 'replace-string)
 (global-set-key (kbd "C-x r r") 'replace-rectangle)
 (global-set-key (kbd "C-x d") 'duplicate-line)
-(global-set-key (kbd "C-c C-g") 'gist-buffer-confirm)
 (global-set-key (kbd "C-x a a") 'ack)
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 
