@@ -3,6 +3,9 @@
 (setq org-src-fontify-natively t)
 (org-display-inline-images t)
 
+(setq org-clock-rounding-minutes 5)
+(setq org-clock-clocked-in-display nil)
+
 (defun my-org-autodone (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
   (let (org-log-done org-log-states)   ; turn off logging
