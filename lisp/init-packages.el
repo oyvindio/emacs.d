@@ -16,11 +16,6 @@
                         'go-mode
                         'go-playground
                         'haskell-mode
-                        'helm
-                        'helm-flx
-                        'helm-flycheck
-                        'helm-git-grep
-                        'helm-projectile
                         'inf-ruby
                         'js2-mode
                         'js2-refactor

@@ -9,9 +9,9 @@
                                    `(font-lock-constant-face ((t (:foreground ,violet))))
                                    `(font-lock-variable-name-face ((t (:foreground ,yellow))))
                                    ;; Same colors as Solarized iterm2 theme for common file types in helm-find-files
-                                   `(helm-ff-executable ((t (:foreground ,red))))
-                                   `(helm-ff-symlink ((t (:foreground ,magenta))))
-                                   `(helm-ff-invalid-symlink ((t (:background ,red))))
+                                   ;; `(helm-ff-executable ((t (:foreground ,red))))
+                                   ;; `(helm-ff-symlink ((t (:foreground ,magenta))))
+                                   ;; `(helm-ff-invalid-symlink ((t (:background ,red))))
 
                                    ;; Use default colors for diff
                                    `(diff-added ((,light-class :background "#ddffdd" :foreground "#22aa22")
