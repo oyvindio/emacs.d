@@ -52,8 +52,8 @@
                                solarized-customizations))
 
 (setq solarized-high-contrast-mode-line t)
-(load-theme 'solarized-light-custom t)
-;; (load-theme 'solarized-dark-custom t)
+;;(load-theme 'solarized-light-custom t)
+(load-theme 'solarized-dark-custom t)
 
 
 (defun set-font-size (size)
