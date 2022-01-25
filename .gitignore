@@ -24,3 +24,4 @@ abbrev_defs
 .cache/*
 eln-cache/*
 /.dap-breakpoints
+/projects
