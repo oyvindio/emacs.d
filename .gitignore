@@ -25,3 +25,4 @@ abbrev_defs
 eln-cache/*
 /.dap-breakpoints
 /projects
+/org-clock-save.el
