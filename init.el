@@ -14,7 +14,6 @@
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 
-(require 'cl)
 (require 'remove-gui)
 (require 'init-packages)
 (require 'my-use-package)
