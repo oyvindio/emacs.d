@@ -23,6 +23,7 @@
                          face indentation space-after-tab)
       whitespace-line-column 120
       ediff-window-setup-function 'ediff-setup-windows-plain
+      ediff-split-window-function 'split-window-horizontally
       x-select-enable-clipboard t
       x-select-enable-primary t
       save-interprogram-paste-before-kill t
