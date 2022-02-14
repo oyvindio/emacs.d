@@ -5,7 +5,8 @@
 
 (use-package org
   :ensure t
-  :bind (([C-tab] . other-window)
+  :bind (:map org-mode-map
+         ([C-tab] . other-window)
          ("C-c t" . org-todo))
   :config
   (setq org-src-fontify-natively t)
