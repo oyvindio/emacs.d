@@ -41,7 +41,7 @@
 (use-package editorconfig
   :ensure t
   :commands editorconfig-mode
-  :init
+  :config
   (add-hook 'coding-hook #'editorconfig-mode))
 
 (add-hook 'coding-hook 'turn-on-column-number-mode)
