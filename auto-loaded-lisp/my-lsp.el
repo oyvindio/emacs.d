@@ -2,7 +2,8 @@
   :ensure t
   :bind (:map lsp-mode-map
               ("s-<f7>" . lsp-find-references)
-              ("M-g d" . lsp-find-definition)))
+              ("M-g d" . lsp-find-definition)
+              ("M-/" . completion-at-point)))
 (use-package lsp-ui
   :ensure t
   :bind (:map lsp-ui-mode-map
