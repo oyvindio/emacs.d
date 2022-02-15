@@ -8,6 +8,8 @@
   :ensure t
   :bind (:map lsp-ui-mode-map
               ("s-l" . nil)
-              ("s-l i" . lsp-ui-imenu)))
+              ("s-l i" . lsp-ui-imenu)
+              ("M-." . lsp-ui-peek-find-definitions)
+              ("M-?" . lsp-ui-peek-find-references)))
 
 (provide 'my-lsp)
