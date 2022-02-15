@@ -27,3 +27,5 @@
   (if (null gopath)
       (setq go-playground-basedir (concat gopath-fallback "/" relative-playground-basedir)))
   (setq go-playground-basedir (concat gopath "/" relative-playground-basedir)))
+
+(setq go-playground-go-command "GO111MODULE=off go")
