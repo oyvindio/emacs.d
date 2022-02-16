@@ -21,7 +21,6 @@
                         'js2-refactor
                         'json-mode
                         'lsp-mode
-                        'lsp-python-ms
                         'lsp-ui
                         'lua-mode
                         'magit
@@ -36,7 +35,6 @@
                         'pytest
                         'python-mode
                         'rbenv
-                        'restclient
                         'ruby-mode
                         'rust-mode
                         'rust-playground
