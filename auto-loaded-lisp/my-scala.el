@@ -1,5 +1,7 @@
-(require 'scala-mode)
-(add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))
-(add-to-list 'auto-mode-alist '("\\.sbt$" . scala-mode))
+(use-package scala-mode
+  :ensure t
+  :mode (("\\.scala$" . scala-mode)
+         ("\\.sbt$" . scala-mode))
+  :commands scala-mode)
 
 (provide 'my-scala)
