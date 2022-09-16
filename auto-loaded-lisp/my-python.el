@@ -5,9 +5,6 @@
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 (add-hook 'python-mode-hook 'run-coding-hook)
-(add-hook 'auto-complete-mode-hook (lambda ()
-                                     (define-key ac-completing-map (kbd "C-n") 'ac-next)
-                                     (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
 
 (require 'pytest)
 (require 'pyenv-mode)
