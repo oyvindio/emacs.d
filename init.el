@@ -2,6 +2,13 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+
+;; Borrowed from https://blog.d46.us/advanced-emacs-startup/
+;; Make startup faster by reducing the frequency of garbage
+;; collection.  The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 50 1000 1000))
+
 (package-initialize)
 
 (defun dot-emacs-relative (path)
@@ -27,3 +34,6 @@
 
 (if (file-exists-p (dot-emacs-relative "local.el"))
   (load (dot-emacs-relative "local.el")))
+
+;; Make gc pauses faster by decreasing the threshold.
+(setq gc-cons-threshold (* 2 1000 1000))
