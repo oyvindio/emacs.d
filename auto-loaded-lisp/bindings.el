@@ -11,7 +11,6 @@
 (global-set-key (kbd "C-x r s") 'replace-string)
 (global-set-key (kbd "C-x r r") 'replace-rectangle)
 (global-set-key (kbd "C-x d") 'duplicate-line)
-(global-set-key (kbd "C-x a a") 'ack)
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 
 
@@ -36,8 +35,6 @@
 (global-set-key (kbd "C-M-r") '(lambda () (interactive) isearch-forward-symbol-at-point -1))
 (global-set-key (kbd "C-c e") 'eval-and-replace)
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
-
-
 
 (global-set-key (kbd "M-\\") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-\\") 'comment-or-uncomment-region-or-line)
