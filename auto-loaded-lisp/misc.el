@@ -132,12 +132,17 @@
                                (invert-face 'mode-line)
                                (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
-(setq github-browse-file-show-line-at-point t)
+(use-package github-browse-file)
 
-(require 'editorconfig)
-(editorconfig-mode 1)
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
 
-(require 'flycheck)
-(global-flycheck-mode)
+(use-package flycheck
+  :ensure t
+  :config
+  (global-flycheck-mode))
+
 
 (provide 'misc)
