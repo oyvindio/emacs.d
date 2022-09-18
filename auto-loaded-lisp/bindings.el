@@ -18,7 +18,6 @@
 ;; important
 (global-unset-key (kbd "M-c"))
 (global-set-key (kbd "M-c c") 'capitalize-word)
-(global-set-key (kbd "M-c u") 'view-url)
 (global-set-key (kbd "M-c e") 'base64-encode-region)
 (global-set-key (kbd "M-c d") 'base64-decode-region)
 
