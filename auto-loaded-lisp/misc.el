@@ -11,32 +11,31 @@
 (prefer-coding-system 'utf-8)
 (setq-default fill-column 118)
 (setq  visible-bell t
-      fringe-mode (cons 4 0)
-      echo-keystrokes 0.1
-      font-lock-maximum-decoration t
-      inhibit-startup-message t
-      transient-mark-mode t
-      shift-select-mode nil
-      mouse-yank-at-point t
-      require-final-newline t
-      truncate-partial-width-windows nil
-      ffap-machine-p-known 'reject
-      whitespace-style '(trailing lines space-before-tab
-                         face indentation space-after-tab)
-      whitespace-line-column 120
-      ediff-window-setup-function 'ediff-setup-windows-plain
-      ediff-split-window-function 'split-window-horizontally
-      x-select-enable-clipboard t
-      x-select-enable-primary t
-      save-interprogram-paste-before-kill t
-      apropos-do-all t
-      mouse-yank-at-point t
-      save-place-file (dot-emacs-relative "places")
-      backup-directory-alist `(("." . ,(dot-emacs-relative "backups")))
-      indicate-empty-lines t
-      imenu-auto-rescan t
-      smart-mark-mode t
-      recentf-max-saved-items 200)
+       fringe-mode (cons 4 0)
+       echo-keystrokes 0.1
+       font-lock-maximum-decoration t
+       inhibit-startup-message t
+       transient-mark-mode t
+       shift-select-mode nil
+       mouse-yank-at-point t
+       require-final-newline t
+       truncate-partial-width-windows nil
+       ffap-machine-p-known 'reject
+       whitespace-style '(trailing lines space-before-tab
+                                   face indentation space-after-tab)
+       whitespace-line-column 120
+       ediff-window-setup-function 'ediff-setup-windows-plain
+       ediff-split-window-function 'split-window-horizontally
+       x-select-enable-clipboard t
+       x-select-enable-primary t
+       save-interprogram-paste-before-kill t
+       apropos-do-all t
+       mouse-yank-at-point t
+       save-place-file (dot-emacs-relative "places")
+       backup-directory-alist `(("." . ,(dot-emacs-relative "backups")))
+       indicate-empty-lines t
+       imenu-auto-rescan t
+       recentf-max-saved-items 200)
 
 (auto-compression-mode t)
 (global-font-lock-mode t)
@@ -117,15 +116,15 @@
 (use-package ibuffer
   :config
   (setq ibuffer-formats '((mark modified read-only " "
-                              (name 36 36 :left :elide)
-                              " "
-                              (size 9 -1 :right)
-                              " "
-                              (mode 16 16 :left :elide)
-                              " " filename-and-process)
-                        (mark " "
-                              (name 16 -1)
-                              " " filename))))
+                                (name 36 36 :left :elide)
+                                " "
+                                (size 9 -1 :right)
+                                " "
+                                (mode 16 16 :left :elide)
+                                " " filename-and-process)
+                          (mark " "
+                                (name 16 -1)
+                                " " filename))))
 
 
 (setq mouse-wheel-scroll-amount '(1
@@ -133,8 +132,8 @@
                                   ((control))))
 
 (setq ring-bell-function '(lambda () ; workaround for badly broken visual bell in OSX 10.11
-                               (invert-face 'mode-line)
-                               (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+                            (invert-face 'mode-line)
+                            (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
 (use-package editorconfig
   :ensure t
@@ -145,5 +144,31 @@
   :ensure t
   :config
   (global-flycheck-mode))
+
+(use-package dockerfile-mode
+  :ensure t)
+
+(use-package expand-region
+  :ensure t
+  :bind ("M-s-e" . 'er/expand-region))
+
+(use-package multiple-cursors
+  :ensure t
+  :bind
+  ("M-s-s" . mc/mark-next-like-this)
+  ("M-s-r" . mc/mark-previous-like-this)
+  ("M-s-a" . mc/mark-all-like-this))
+
+(use-package smart-mark
+  :ensure t
+  :config
+  (setq smart-mark-mode t))
+
+(use-package unfill
+  :ensure t)
+
+(use-package yaml-mode
+  :ensure t
+  :mode ("\\.yaml" . yaml-mode))
 
 (provide 'misc)

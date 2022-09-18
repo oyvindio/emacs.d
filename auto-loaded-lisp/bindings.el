@@ -37,10 +37,7 @@
 (global-set-key (kbd "C-c e") 'eval-and-replace)
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
 
-(global-set-key (kbd "M-s-e") 'er/expand-region)
-(global-set-key (kbd "M-s-s") 'mc/mark-next-like-this)
-(global-set-key (kbd "M-s-r") 'mc/mark-previous-like-this)
-(global-set-key (kbd "M-s-a") 'mc/mark-all-like-this)
+
 
 (global-set-key (kbd "M-\\") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-\\") 'comment-or-uncomment-region-or-line)
@@ -62,7 +59,7 @@
   ;; mapped to the Norwegian letters æøå, and needed to get this to
   ;; work in emacs as well.
   (global-set-key (kbd "s-[") (lambda () (interactive) (insert "å")))
-  (global-set-key (kbd "s-{") (lambda () (interactive) (insert "Å"))) 
+  (global-set-key (kbd "s-{") (lambda () (interactive) (insert "Å")))
 
   (global-set-key (kbd "s-'") (lambda () (interactive) (insert "æ")))
   (global-set-key (kbd "s-\"") (lambda () (interactive) (insert "Æ")))

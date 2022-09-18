@@ -45,4 +45,10 @@
         (list)
       (gather-errors (split-string hlint-output "\n")))))
 
+(use-package ghc
+  :ensure t)
+
+(use-package ghci-completion
+  :ensure t)
+
 (provide 'haskell)
