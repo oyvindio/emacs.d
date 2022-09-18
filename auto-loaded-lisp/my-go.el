@@ -1,6 +1,6 @@
 (use-package go-mode
   :ensure t
-  :after lsp
+  :after lsp exec-path-from-shell
   :config
   (exec-path-from-shell-copy-env "GOPATH")
 

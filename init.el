@@ -18,12 +18,15 @@
 (add-to-list 'load-path (dot-emacs-relative "lisp"))
 (add-to-list 'load-path (dot-emacs-relative "auto-loaded-lisp"))
 
-(require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
-
 (require 'remove-gui)
 (require 'init-packages)
 (require 'my-use-package)
+
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
 (require 'my-ivy)
 
 (setq custom-file (dot-emacs-relative "custom.el"))
