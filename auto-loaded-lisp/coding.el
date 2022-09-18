@@ -15,9 +15,6 @@
 (defun turn-on-whitespace ()
   (whitespace-mode t))
 
-(defun turn-on-paredit ()
-  (paredit-mode t))
-
 (defun turn-off-tool-bar ()
   (tool-bar-mode -1))
 
