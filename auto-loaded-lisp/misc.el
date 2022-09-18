@@ -135,11 +135,6 @@
                             (invert-face 'mode-line)
                             (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
-(use-package editorconfig
-  :ensure t
-  :config
-  (editorconfig-mode 1))
-
 (use-package flycheck
   :ensure t
   :config
