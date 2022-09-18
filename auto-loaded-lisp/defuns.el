@@ -15,15 +15,6 @@
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
 
-
-;; source: http://github.com/defunkt/emacs/blob/master/defunkt/defuns.el
-(defun gist-buffer-confirm (&optional private)
-  "Gists the current buffer (optionally creating a private gist), after asking
- for confirmation."
-  (interactive "P")
-  (when (yes-or-no-p "Are you sure you want to Gist this buffer? ")
-    (gist-region-or-buffer private)))
-
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun move-file-and-buffer (dir)
   "Moves both current buffer and file it's visiting to DIR." (interactive "DNew directory: ")
@@ -77,18 +68,6 @@
 
   ;; put the point in the lowest line and return
   (next-line arg))
-
-;; http://tuxicity.se/emacs/2009/06/03/google-region-in-emacs.html
-;; modified to use url-hexify-string
-(defun google ()
-  "Googles a query or region if any."
-  (interactive)
-  (browse-url
-   (concat
-    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
-    (if mark-active
-        (url-hexify-string (buffer-substring (region-beginning) (region-end)))
-      (url-hexify-string (read-string "Query: "))))))
 
 ;; http://www.emacswiki.org/emacs/BuildTags
 (defun create-tags (dir-name)
@@ -189,8 +168,6 @@ by using nxml's indentation rules."
   "de-urlencode the region between START and END in current buffer."
   (interactive "r")
   (apply-function-to-region start end #'url-unhex-string))
-
-
 
 (defun untabify-buffer ()
   (interactive)
