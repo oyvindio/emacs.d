@@ -1,8 +1,10 @@
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+(use-package uniquify
+  :config
+  (setq uniquify-buffer-name-style 'forward))
 
-(require 'saveplace)
-(setq-default save-place t)
+(use-package saveplace
+  :config
+  (setq-default save-place t))
 
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -112,8 +114,9 @@
   ;; use spotlight for locate
   (setq locate-command "mdfind"))
 
-(require 'ibuffer)
-(setq ibuffer-formats '((mark modified read-only " "
+(use-package ibuffer
+  :config
+  (setq ibuffer-formats '((mark modified read-only " "
                               (name 36 36 :left :elide)
                               " "
                               (size 9 -1 :right)
@@ -122,7 +125,8 @@
                               " " filename-and-process)
                         (mark " "
                               (name 16 -1)
-                              " " filename)))
+                              " " filename))))
+
 
 (setq mouse-wheel-scroll-amount '(1
                                   ((shift) . 5)
@@ -143,6 +147,5 @@
   :ensure t
   :config
   (global-flycheck-mode))
-
 
 (provide 'misc)
