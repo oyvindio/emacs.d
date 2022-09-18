@@ -136,8 +136,6 @@
                                (invert-face 'mode-line)
                                (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
-(use-package github-browse-file)
-
 (use-package editorconfig
   :ensure t
   :config
