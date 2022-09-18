@@ -13,7 +13,8 @@
   (setq org-clock-rounding-minutes 5)
   (setq org-clock-clocked-in-display nil)
   (setq org-clock-persist t)
-  (add-hook 'org-after-todo-statistics-hook 'my-org-autodone))
+  (add-hook 'org-after-todo-statistics-hook 'my-org-autodone)
+  (org-clock-persistence-insinuate))
 
-(org-clock-persistence-insinuate)
+
 (provide 'my-org)
