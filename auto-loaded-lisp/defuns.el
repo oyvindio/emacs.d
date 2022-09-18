@@ -207,16 +207,6 @@ by using nxml's indentation rules."
   (untabify-buffer)
   (delete-trailing-whitespace))
 
-(defun eval-and-replace ()
-  "Replace the preceding sexp with its value."
-  (interactive)
-  (backward-kill-sexp)
-  (condition-case nil
-      (prin1 (eval (read (current-kill 0)))
-             (current-buffer))
-    (error (message "Invalid expression")
-           (insert (current-kill 0)))))
-
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
   (interactive)
@@ -225,13 +215,6 @@ by using nxml's indentation rules."
         (linum-mode 1)
         (goto-line (read-number "Goto line: ")))
     (linum-mode -1)))
-
-; source: http://stackoverflow.com/a/6541072
-(defun apply-function-to-region (start end func)
-  "run a function over the region between START and END in current buffer."
-  (save-excursion
-    (let ((text (delete-and-extract-region start end)))
-      (insert (funcall func text)))))
 
 (defun ansi-colorize-buffer ()
   "Render ANSI color escape codes in color"
