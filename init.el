@@ -25,6 +25,7 @@
 (use-package exec-path-from-shell
   :ensure t
   :config
+  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOPATH"))
   (exec-path-from-shell-initialize))
 
 (require 'my-ivy)

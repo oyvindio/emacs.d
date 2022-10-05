@@ -1,9 +1,7 @@
 (use-package go-mode
   :ensure t
-  :after lsp exec-path-from-shell
+  :after lsp
   :config
-  (exec-path-from-shell-copy-env "GOPATH")
-
   (defun lsp-go-install-save-hooks ()
     (add-hook 'before-save-hook #'lsp-format-buffer t t)
     (add-hook 'before-save-hook #'lsp-organize-imports t t))
