@@ -164,6 +164,8 @@
 
 (use-package yaml-mode
   :ensure t
-  :mode ("\\.yaml" . yaml-mode))
+  :mode ("\\.y(a)?ml" . yaml-mode)
+  :config
+    (add-hook 'yaml-mode-hook 'lsp))
 
 (provide 'misc)
