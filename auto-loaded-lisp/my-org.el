@@ -15,7 +15,8 @@
   (setq org-clock-clocked-in-display nil)
   (setq org-clock-persist t)
   (add-hook 'org-after-todo-statistics-hook 'my-org-autodone)
-  (org-clock-persistence-insinuate))
+  (org-clock-persistence-insinuate)
+  (add-hook 'org-mode-hook 'visual-line-mode))
 
 
 (provide 'my-org)
