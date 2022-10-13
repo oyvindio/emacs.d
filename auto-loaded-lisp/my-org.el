@@ -7,7 +7,8 @@
   :ensure t
   :bind (:map org-mode-map
          ([C-tab] . other-window)
-         ("C-c t" . org-todo))
+         ("C-c t" . org-todo)
+         ("C-c l" . org-store-link))
   :config
   (setq org-src-fontify-natively t)
   (setq org-clock-rounding-minutes 5)
