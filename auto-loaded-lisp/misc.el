@@ -168,4 +168,11 @@
   :config
     (add-hook 'yaml-mode-hook 'lsp))
 
+(use-package avy
+  :ensure t
+  :bind
+  ("C-:" . avy-goto-char)
+  ;; ("C-'" . avy-goto-char-2)
+  ("C-'" . avy-goto-char-timer))
+
 (provide 'misc)

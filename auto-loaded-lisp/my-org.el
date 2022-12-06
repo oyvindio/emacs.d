@@ -10,7 +10,9 @@
   (setq org-clock-clocked-in-display nil)
   (setq org-clock-persist t)
   (org-clock-persistence-insinuate)
-  (add-hook 'org-mode-hook 'visual-line-mode))
+  (add-hook 'org-mode-hook 'visual-line-mode)
+  (unbind-key "C-'" org-mode-map)
+  )
 
 
 (provide 'my-org)
