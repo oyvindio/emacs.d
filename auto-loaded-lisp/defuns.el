@@ -189,9 +189,9 @@ by using nxml's indentation rules."
   (interactive)
   (unwind-protect
       (progn
-        (linum-mode 1)
+        (display-line-numbers-mode 1)
         (goto-line (read-number "Goto line: ")))
-    (linum-mode -1)))
+    (display-line-numbers-mode -1)))
 
 (defun ansi-colorize-buffer ()
   "Render ANSI color escape codes in color"
