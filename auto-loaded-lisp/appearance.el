@@ -78,7 +78,6 @@
 
 (when window-system
   (set-face-attribute 'default nil :font "Source Code Pro 17")
-  (set-font-size "17")
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
