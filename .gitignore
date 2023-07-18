@@ -26,3 +26,4 @@ eln-cache/*
 /.dap-breakpoints
 /projects
 /org-clock-save.el
+/org-persist/
