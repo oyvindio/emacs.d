@@ -1,13 +1,14 @@
 (use-package go-mode
   :ensure t
-  :after lsp
+  ;; :after lsp
   :config
-  (defun lsp-go-install-save-hooks ()
-    (add-hook 'before-save-hook #'lsp-format-buffer t t)
-    (add-hook 'before-save-hook #'lsp-organize-imports t t))
-  (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+  ;; (defun lsp-go-install-save-hooks ()
+  ;;   (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  ;;   (add-hook 'before-save-hook #'lsp-organize-imports t t))
+  ;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
   (add-hook 'go-mode-hook 'run-coding-hook)
-  (add-hook 'go-mode-hook 'lsp)
+  ;; (add-hook 'go-mode-hook 'lsp)
+  (add-hook 'go-mode-hook 'eglot-ensure)
   :bind
   (:map go-mode-map
         ("C-<return>" . go-test-current-test)

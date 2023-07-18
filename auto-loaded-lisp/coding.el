@@ -31,6 +31,12 @@
 (defun turn-on-delete-trailing-whitespace ()
   (add-hook 'before-save-hook 'delete-trailing-whitespace nil t))
 
+(use-package flymake
+  :bind (:map flymake-mode-map ("C-x `" . flymake-goto-next-error))
+  )
+
+(defun turn-on-flymake-mode ()
+  (flymake-mode 1))
 
 (defvar coding-hook nil
   "Hook that gets run on activation of any programming mode.")
@@ -48,6 +54,7 @@
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-subword-mode)
 (add-hook 'coding-hook 'turn-on-delete-trailing-whitespace)
+(add-hook 'coding-hook 'turn-on-flymake-mode)
 
 (defun run-coding-hook ()
   (run-hooks 'coding-hook))

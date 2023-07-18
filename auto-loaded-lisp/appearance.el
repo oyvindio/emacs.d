@@ -48,6 +48,8 @@
                                      `(magit-diff-removed-highlight ((,light-class :background "#eecccc" :foreground "#aa2222")
                                                                      (,dark-class :background "#663333" :foreground "#eecccc")
                                                                      ))
+
+                                     ;; lsp-ui
                                      `(lsp-ui-peek-selection ((,light-class :background ,magenta :foreground ,base03)
                                                               (,dark-class :background ,magenta :foreground ,base03)))
                                      `(lsp-ui-peek-peek ((,light-class :background ,base03)
@@ -64,6 +66,14 @@
                                                              (,dark-class :foreground ,blue)))
                                      `(lsp-ui-peek-header ((,light-class :background ,base1 :foreground ,base03)
                                                            (,dark-class :background ,base1 :foreground ,base03)))
+
+                                     ;; eglot
+                                     `(eglot-mode-line ((t (:foreground ,base01))))
+
+                                     ;;flymake
+                                     `(flymake-error ((t (:color ,red))))
+                                     `(flymake-warning ((t (:color ,yellow))))
+                                     `(flymake-note ((t (:color ,green))))
                                      ))))
 
     (solarized-create-theme-file 'light 'solarized-light-custom solarized-light-color-palette-alist

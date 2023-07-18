@@ -1,11 +1,13 @@
 (use-package python-mode
   :ensure t
-  :after lsp
+  ;; :after lsp
   :mode (("\\.py$" . python-mode)
          ("\\.wsgi$" . python-mode))
   :config
   (add-hook 'python-mode-hook 'run-coding-hook)
-  (add-hook 'python-mode-hook 'lsp))
+  ;; (add-hook 'python-mode-hook 'lsp)
+  (add-hook 'python-mode-hook 'eglot-ensure)
+  )
 
 (use-package pytest
   :ensure t

@@ -135,10 +135,11 @@
                             (invert-face 'mode-line)
                             (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
-(use-package flycheck
-  :ensure t
-  :config
-  (global-flycheck-mode))
+;; disable flycheck; eglot uses flymake, can I use only that?
+;; (use-package flycheck
+;;   :ensure t
+;;   :config
+;;   (global-flycheck-mode))
 
 (use-package dockerfile-mode
   :ensure t)
@@ -166,7 +167,10 @@
   :ensure t
   :mode ("\\.y(a)?ml" . yaml-mode)
   :config
-    (add-hook 'yaml-mode-hook 'lsp))
+    ;; (add-hook 'yaml-mode-hook 'lsp)
+    ;; (add-hook 'yaml-mode-hook 'eglot-ensure)
+  (setq yaml-mode-hook '(er/add-yaml-mode-expansions yaml-set-imenu-generic-expression) )
+    )
 
 (use-package avy
   :ensure t
