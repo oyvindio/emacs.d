@@ -6,6 +6,6 @@
       (window-height . 0.25)
       (side . bottom))))
 
-(setq display-buffer-alist nil)
+;(setq display-buffer-alist nil)
 
 (provide 'my-window-management)

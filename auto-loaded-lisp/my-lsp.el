@@ -13,10 +13,16 @@
   )
 (use-package lsp-ui
   :ensure t
+  :config
+  ;; disable eldoc on hover, use eldoc buffer instead
+  ;; (setq lsp-eldoc-enable-hover nil)
+  ;; show the full docs in eldoc buffer, not just the symbol name
+  ;; (setq lsp-eldoc-render-all t)
   :bind (:map lsp-ui-mode-map
               ("s-l" . nil)
               ("s-l i" . lsp-ui-imenu)
               ("M-." . lsp-ui-peek-find-definitions)
-              ("M-?" . lsp-ui-peek-find-references)))
+              ("M-?" . lsp-ui-peek-find-references)
+              ("s-l h t" . lsp-ui-doc-toggle)))
 
 (provide 'my-lsp)
