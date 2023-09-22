@@ -167,9 +167,8 @@
   :ensure t
   :mode ("\\.y(a)?ml" . yaml-mode)
   :config
-    ;; (add-hook 'yaml-mode-hook 'lsp)
     ;; (add-hook 'yaml-mode-hook 'eglot-ensure)
-  (setq yaml-mode-hook '(er/add-yaml-mode-expansions yaml-set-imenu-generic-expression) )
+  (setq yaml-mode-hook '(er/add-yaml-mode-expansions yaml-set-imenu-generic-expression))
     )
 
 (use-package avy

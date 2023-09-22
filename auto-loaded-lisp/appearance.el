@@ -49,24 +49,6 @@
                                                                      (,dark-class :background "#663333" :foreground "#eecccc")
                                                                      ))
 
-                                     ;; lsp-ui
-                                     `(lsp-ui-peek-selection ((,light-class :background ,magenta :foreground ,base03)
-                                                              (,dark-class :background ,magenta :foreground ,base03)))
-                                     `(lsp-ui-peek-peek ((,light-class :background ,base03)
-                                                         (,dark-class :background ,base03)))
-                                     `(lsp-ui-peek-list ((,light-class :background ,base03)
-                                                         (,dark-class :background ,base03)))
-                                     `(lsp-ui-peek-list ((,light-class :background ,base03)
-                                                         (,dark-class :background ,base03)))
-                                     `(lsp-ui-peek-line-number ((,light-class :foreground ,base00)
-                                                                (,dark-class :foreground ,base00)))
-                                     `(lsp-ui-peek-highlight ((,light-class :background ,yellow :foreground ,base03)
-                                                              (,dark-class :background ,yellow :foreground ,base03)))
-                                     `(lsp-ui-peek-filename ((,light-class :foreground ,blue)
-                                                             (,dark-class :foreground ,blue)))
-                                     `(lsp-ui-peek-header ((,light-class :background ,base1 :foreground ,base03)
-                                                           (,dark-class :background ,base1 :foreground ,base03)))
-
                                      ;; eglot
                                      `(eglot-mode-line ((t (:foreground ,base01))))
 
