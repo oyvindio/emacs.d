@@ -179,4 +179,9 @@
   ;; ("C-'" . avy-goto-char-2)
   ("C-'" . avy-goto-char-timer))
 
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
 (provide 'misc)
