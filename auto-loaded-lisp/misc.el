@@ -26,16 +26,17 @@
        whitespace-line-column 120
        ediff-window-setup-function 'ediff-setup-windows-plain
        ediff-split-window-function 'split-window-horizontally
-       x-select-enable-clipboard t
-       x-select-enable-primary t
+       select-enable-primary t
        save-interprogram-paste-before-kill t
        apropos-do-all t
        mouse-yank-at-point t
-       save-place-file (dot-emacs-relative "places")
        backup-directory-alist `(("." . ,(dot-emacs-relative "backups")))
        indicate-empty-lines t
        imenu-auto-rescan t
-       recentf-max-saved-items 200)
+       recentf-max-saved-items 200
+       sentence-end-double-space nil
+       bookmark-search-size 64
+)
 
 (auto-compression-mode t)
 (global-font-lock-mode t)
