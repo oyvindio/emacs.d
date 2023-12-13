@@ -27,3 +27,4 @@ eln-cache/*
 /projects
 /org-clock-save.el
 /org-persist/
+/tree-sitter/
