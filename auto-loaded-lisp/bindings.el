@@ -1,4 +1,3 @@
-(global-set-key (kbd "C-h a") 'apropos)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
@@ -7,20 +6,11 @@
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
-(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 (global-set-key (kbd "C-x r s") 'replace-string)
 (global-set-key (kbd "C-x r r") 'replace-rectangle)
 (global-set-key (kbd "C-x d") 'duplicate-line)
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
-
-
-;; free up M-c for other key bindings; capitalize-word isn't THAT
-;; important
-(global-unset-key (kbd "M-c"))
-(global-set-key (kbd "M-c c") 'capitalize-word)
-(global-set-key (kbd "M-c e") 'base64-encode-region)
-(global-set-key (kbd "M-c d") 'base64-decode-region)
-
+(global-set-key (kbd "M-s-SPC") 'cycle-spacing)
 (global-set-key (kbd "M-S-<up>") 'move-line-up)
 (global-set-key (kbd "M-S-<down>") 'move-line-down)
 
