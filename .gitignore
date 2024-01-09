@@ -28,3 +28,4 @@ eln-cache/*
 /org-clock-save.el
 /org-persist/
 /tree-sitter/
+/projectile.cache
