@@ -12,11 +12,6 @@
                                      `(font-lock-builtin-face ((t (:foreground ,green))))
                                      `(font-lock-constant-face ((t (:foreground ,violet))))
                                      `(font-lock-variable-name-face ((t (:foreground ,yellow))))
-                                     ;; Same colors as Solarized iterm2 theme for common file types in helm-find-files
-                                     ;; `(helm-ff-executable ((t (:foreground ,red))))
-                                     ;; `(helm-ff-symlink ((t (:foreground ,magenta))))
-                                     ;; `(helm-ff-invalid-symlink ((t (:background ,red))))
-
                                      ;; Use default colors for diff
                                      `(diff-added ((,light-class :background "#ddffdd" :foreground "#22aa22")
                                                    (,dark-class (:background "#335533" :foreground "#ddffdd"))
@@ -48,10 +43,6 @@
                                      `(magit-diff-removed-highlight ((,light-class :background "#eecccc" :foreground "#aa2222")
                                                                      (,dark-class :background "#663333" :foreground "#eecccc")
                                                                      ))
-
-                                     ;; eglot
-                                     `(eglot-mode-line ((t (:foreground ,base01))))
-
                                      ;;flymake
                                      `(flymake-error ((t (:color ,red))))
                                      `(flymake-warning ((t (:color ,yellow))))
