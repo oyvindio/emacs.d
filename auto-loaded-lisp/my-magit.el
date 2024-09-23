@@ -14,6 +14,13 @@
     (kill-buffer)
     (jump-to-register :magit-fullscreen))
 
+  (setq git-commit-summary-max-length 50)
+
+  (defun set-git-commit-fill-column ()
+    (setq fill-column 72))
+
+  (add-hook 'git-commit-mode-hook 'set-git-commit-fill-column)
+
   :commands magit-status
   :bind
   ("C-x g" . magit-status)
@@ -21,15 +28,5 @@
         ("C-<tab>" . other-window))
   (:map magit-status-mode-map
         ("q" . magit-quit-session)))
-
-(use-package git-commit
-  :ensure t
-  :config
-  (setq git-commit-summary-max-length 50)
-
-  (defun set-git-commit-fill-column ()
-    (setq fill-column 72))
-
-  (add-hook 'git-commit-mode-hook 'set-git-commit-fill-column))
 
 (provide 'my-magit)
