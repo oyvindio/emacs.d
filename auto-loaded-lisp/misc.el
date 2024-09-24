@@ -184,4 +184,10 @@
   :config
   (which-key-mode))
 
+(use-package browse-at-remote
+  :ensure t)
+
+(use-package fish-mode
+  :ensure t)
+
 (provide 'misc)
