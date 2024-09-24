@@ -6,4 +6,7 @@
 
   (if (executable-find "pandoc")
       (setq markdown-command (format "pandoc -f markdown_github --css=file://%s -t html5" (my-markdown-css-path)))
-    (setq markdown-css-paths (list (my-markdown-css-path)))))
+    (setq markdown-css-paths (list (my-markdown-css-path))))
+
+  (add-hook 'markdown-mode-hook 'flyspell-mode)
+  )
