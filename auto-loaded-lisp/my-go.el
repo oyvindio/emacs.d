@@ -3,6 +3,8 @@
   :config
   (add-hook 'go-mode-hook 'run-coding-hook)
   (add-hook 'go-mode-hook 'eglot-ensure)
+  (add-hook 'go-ts-mode-hook 'run-coding-hook)
+  (add-hook 'go-ts-mode-hook 'eglot-ensure)
   ;; copied fromhttps://github.com/joaotavora/eglot/issues/574#issuecomment-1401023985
   (defun my-eglot-organize-imports () (interactive)
 	 (eglot-code-actions nil nil "source.organizeImports" t))
@@ -10,6 +12,7 @@
     (add-hook 'before-save-hook #'eglot-format-buffer t t)
     (add-hook 'before-save-hook 'my-eglot-organize-imports nil t))
   (add-hook 'go-mode-hook #'eglot-go-install-save-hooks)
+  (add-hook 'go-ts-mode-hook #'eglot-go-install-save-hooks)
   :bind
   (:map go-mode-map
         ("C-<return>" . go-test-current-test)

@@ -2,9 +2,11 @@
   :ensure t
   :mode (("\\.py$" . python-mode)
          ("\\.wsgi$" . python-mode))
-  :config
-  (add-hook 'python-mode-hook 'run-coding-hook)
-  (add-hook 'python-mode-hook 'eglot-ensure)
+  :hook
+  (python-mode . run-coding-hook)
+  (python-mode . eglot-ensure)
+  (python-ts-mode . run-coding-hook)
+  (python-ts-mode . eglot-ensure)
   )
 
 
