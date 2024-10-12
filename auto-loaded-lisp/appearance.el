@@ -55,9 +55,15 @@
                                  solarized-customizations))
 
   (setq solarized-high-contrast-mode-line t)
-  (load-theme 'solarized-light-custom t)
+  ;; (load-theme 'solarized-light-custom t)
   ;; (load-theme 'solarized-dark-custom t)
   )
+
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :config
+  (load-theme 'sanityinc-tomorrow-eighties t))
+
 
 (when window-system
   (set-face-attribute 'default nil :font "Source Code Pro 17")
