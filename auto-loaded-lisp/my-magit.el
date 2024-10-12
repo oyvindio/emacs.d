@@ -29,4 +29,7 @@
   (:map magit-status-mode-map
         ("q" . magit-quit-session)))
 
+;; use git-commit-mode also when editing COMMIT_EDITMSG via `git commit -> emacsclient` in the commandline
+(add-to-list 'auto-mode-alist '("COMMIT_EDITMSG" . 'git-commit-mode))
+
 (provide 'my-magit)
